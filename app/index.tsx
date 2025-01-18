@@ -1,19 +1,32 @@
-import { Stack, Link } from 'expo-router';
+import { StyleSheet, Text, View , Image } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import React from 'react'
 
-import { Button } from '~/components/Button';
-import { Container } from '~/components/Container';
-import { ScreenContent } from '~/components/ScreenContent';
-
-export default function Home() {
+const Onboarding = () => {
   return (
-    <>
-      <Stack.Screen options={{ title: 'Home' }} />
-      <Container>
-        <ScreenContent path="app/index.tsx" title="Home" />
-        <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
-          <Button title="Show Details" />
-        </Link>
-      </Container>
-    </>
-  );
+    <SafeAreaView
+    style={styles.screen}
+    >
+      {/* <Text style={{fontFamily: 'Rubik-Bold'}}>RootLayout</Text>
+      <Text style={{fontFamily: 'Rubik-ExtraBold'}}>RootLayout</Text>
+      <Text style={{fontFamily: 'Rubik-Medium'}}>RootLayout</Text>
+      <Text style={{fontFamily: 'Rubik-Regular'}}>RootLayout</Text>
+      <Text style={{fontFamily: 'Rubik-SemiBold'}}>RootLayout</Text> */}
+      <Image 
+      source={require("../assets/images/splash.png")}
+      resizeMode= 'contain'
+      style={{height: 250 , width: "100%"}}
+      />
+    </SafeAreaView>
+  )
 }
+
+export default Onboarding
+
+const styles = StyleSheet.create({
+  screen:{
+    flex: 1,
+    justifyContent:'center',
+    alignItems:'center'
+  }
+})
