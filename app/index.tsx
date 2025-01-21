@@ -19,7 +19,7 @@ const Onboarding = () => {
       resizeMode= 'contain'
       style={{height: 250 , width: "100%"}}
       /> */}
-      <Redirect href={"/(tabs)/home"}/>
+      <Redirect href={"/(tabs)/profile"}/>
       <Text className=' text-gray-400 '>WELCOME TO REAL SCOUT</Text>
       <Text className='  text-primary-100'>Let's Get You Closer</Text>
       <Text>TO <Text

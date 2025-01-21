@@ -18,12 +18,18 @@ const PropertyCard = () => {
         </View>
       </ImageBackground>
 
+
       {/* for texts and heart */}
-      <Text className={`${nativewind.text}  text-black `}>La Grand Masion</Text>
+      <View 
+      className='  mt-3 gap-1 '>
+
+      <Text className={` text-black `}>La Grand Masion</Text>
 
       <Text className={` text-gray-400 `}>Tokyo ,Japan</Text>
 
-      <View className=" flex-row  items-center justify-between">
+</View>
+
+      <View className=" flex-row  items-center justify-between mt-3">
         <Text className="font-bold text-blue-500">$12219</Text>
         <Image source={icons.heart} resizeMode="contain" className="  h-7 w-7 " />
       </View>

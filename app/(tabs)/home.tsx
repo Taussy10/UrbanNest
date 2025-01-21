@@ -9,7 +9,7 @@ import Recom from '~/components/home/recom'
 const Home = () => {
   return (
     <SafeAreaView
-    className={styles.screen}>
+    className={nativewind.screen}>
       <ScrollView
       showsVerticalScrollIndicator={false}
       >
@@ -27,7 +27,7 @@ const Home = () => {
 
 export default Home
 
-const styles = {
+const nativewind = {
   screen: 'flex-1 pl-4 pr-4 p-4  bg-[#ffffff] ',
 
 };

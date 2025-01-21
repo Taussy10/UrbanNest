@@ -7,7 +7,7 @@ const Recom = () => {
     <View>
              {/* Heading */}
               <View className=" flex-row justify-between ">
-                <Text>Featured</Text>
+                <Text>Our Recommendation</Text>
                 <Text className="text-blue-500">See All</Text>
               </View>
     
