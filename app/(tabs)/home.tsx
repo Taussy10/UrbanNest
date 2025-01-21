@@ -3,6 +3,7 @@ import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Header from '~/components/home/header'
 import Search from '~/components/home/search'
+import Featured from '~/components/home/featured'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       {/* <Text>Home</Text> */}
       <Header />
       <Search />
+      <Featured/>
     </SafeAreaView>
   )
 }
@@ -18,6 +20,6 @@ const Home = () => {
 export default Home
 
 const styles = {
-  screen: 'flex-1 pl-4 pr-4 p-4  bg-slate-300 ',
+  screen: 'flex-1 pl-4 pr-4 p-4  bg-[#ffffff] ',
 
 };

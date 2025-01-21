@@ -13,9 +13,12 @@ const Search = () => {
       >
       <Image 
 source={icons.search}
-className="  h-7 w-7 "
+resizeMode= 'contain'
+className="   size-6 "
 />
-<Text>Search something</Text>
+<Text
+className=' text-[#8C8E98]'
+>Search something</Text>
 
       </View>
 
@@ -34,5 +37,5 @@ className="  h-7 w-7 "
 export default Search
 
 const Styles = {
-    component: ' mt-4 flex-row justify-between items-center bg-green-300 pb-2 pr-2  pl-2 rounded-lg'
+    component: ' mt-4 flex-row justify-between items-center bg-[#FBFBFD] pb-2 pr-2  pl-2 rounded-lg'
 }
