@@ -15,11 +15,13 @@ const Featured = () => {
       {/* container for image */}
       <View>
         <ImageBackground source={images.newYork} className="  h-72    w-52 rounded-2xl ">
+
           {/* for star */}
           <View style={styles.starContainer}>
             <Image source={icons.star} resizeMode="contain" className="  h-7 w-7 " />
             <Text className="  font-bold text-blue-500">4.8</Text>
           </View>
+
 
           {/* for image text */}
           <View style={{ position: 'absolute', bottom: 10, paddingLeft: 8, paddingRight: 8 }}>
