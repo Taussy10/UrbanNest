@@ -3,7 +3,7 @@
     "name": "Real-State",
     "slug": "Real-State",
     "version": "1.0.0",
-    "scheme": "Real-State",
+    "scheme": "real-state",
     "newArchEnabled": true,
     "web": {
       "bundler": "metro",
@@ -12,7 +12,19 @@
     },
     "plugins": [
       "expo-router",
-        "expo-font"
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#232323",
+          "image": "./assets/images/splash.png",
+          "dark": {
+            "image": "./assets/splash-icon-dark.png",
+            "backgroundColor": "#000000"
+          },
+          "imageWidth": 200
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
@@ -21,22 +33,14 @@
     "orientation": "portrait",
     "icon": "./assets/images/splash.png",
     "userInterfaceStyle": "light",
+    
     "splash": {
-      "image": "assets/images/splash.png",
+      "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
       "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
-    }
+    ]
   }
 }
