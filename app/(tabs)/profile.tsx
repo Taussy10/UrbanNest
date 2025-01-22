@@ -15,7 +15,8 @@ const Profile = () => {
         </View>
 
         {/* for horizontal line */}
-        <View className=" mt-8 border-b border-t  border-[#E6F0FF]">
+        {/* <View className=" mt-8 border-b border-t  border-[#E6F0FF]"> */}
+        <View style={{        borderBottomColor: '#E6F0FF',}}>
 
 
           {/* container for payments and booking */}
@@ -46,6 +47,8 @@ const Profile = () => {
 
 {/* for logout */}
  {/* Logout */}
+
+
  <TouchableOpacity 
  activeOpacity={0.7}
  className=" flex-row items-center gap-2 mt-4">
