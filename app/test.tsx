@@ -10,9 +10,14 @@ const Test = () => {
     <View
     style={{
  // itn takes available space of screen
-    height: "100%",
-    width: "100%",
+    // height: 100,
     backgroundColor: 'lightgreen',
+    flex: 1,
+    padding: 20,
+    flexDirection: 'row',
+    justifyContent:'space-between',
+    alignItems: 'center',
+  // padding: 10,
     // Ensures children don't exceed parent's boundaries
 
     }}
@@ -21,25 +26,37 @@ const Test = () => {
     // so child will take max 100h and 100w
     >
        
-        {/* child 1 */}
+    {/* child 1 will take 0% of 100px(container*/}
 <View
  style={{
-    height: "25%",
+   height: 200,
+   width: 100,
     backgroundColor: 'lightblue'
     }}
     // 
->
+/>
 
-</View>
 
+     {/* child 2 will take 50% of 100px(container) which is equal to 50px*/}
 <View
  style={{
-    height: "50%",
-    backgroundColor: 'orange'
+  height: 200,
+   width: 100,
+  backgroundColor: 'orange',
+    
+    // padding: 10,
     }}
->
+ />
+<View
+ style={{
+  height: 200,
+   width: 100,
+  backgroundColor: 'yellow',
+    // padding: 10,
+    }}
+ />
 
-</View>
+
 
       {/* <Image source={require("./assets/images/splash.png")} /> */}
     </View>
