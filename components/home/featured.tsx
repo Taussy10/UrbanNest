@@ -1,8 +1,11 @@
-import { View, Text, Image, ImageBackground, StyleSheet } from 'react-native';
+import { View, Text, Image, ImageBackground, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
 import images from '~/constants/images';
 import icons from '~/constants/icons';
+import { useRouter } from 'expo-router';
 const Featured = () => {
+  const router = useRouter()
+
   return (
     // container for component
     <View>
@@ -13,7 +16,10 @@ const Featured = () => {
       </View>
 
       {/* container for image */}
-      <View>
+      <TouchableOpacity
+      activeOpacity={0.7}
+      onPress={() =>router.push('/details')}
+      >
         <ImageBackground source={images.newYork} className="  h-72    w-52 rounded-2xl ">
 
           {/* for star */}
@@ -35,7 +41,7 @@ const Featured = () => {
             </View>
           </View>
         </ImageBackground>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };

@@ -17,7 +17,10 @@ const Onboarding = () => {
     <SafeAreaView
     className={nativewind.screen}>
     
-    <Redirect href={'/test'} />
+        {/* use redirect while working on any scren 
+    app will refresh and move to that screen*/}
+    <Redirect href={'/details'} />
+
       {/* don't delete this just: after compiltion of project can be delete */}
       {/* <Text style={{fontFamily: 'Rubik-Bold'}}>RootLayout</Text>
       <Text style={{fontFamily: 'Rubik-ExtraBold'}}>RootLayout</Text>

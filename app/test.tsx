@@ -47,6 +47,8 @@ const Test = () => {
     // padding: 10,
     }}
  />
+      {/* child 3 will take 50% of 100px(container) which is equal to 50px*/}
+
 <View
  style={{
   height: 200,
