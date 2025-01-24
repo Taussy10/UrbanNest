@@ -23,6 +23,17 @@ module.exports = {
         },
         danger: "#F75555",
       },
+      fontFamily: {
+        // sans-serif is backup font if something happens with Rubik then sans-serif will apply
+        // btw sans-serif ios default font so in android sans-serif won't work 
+        // so know about android font then put it here 
+        rubik: ["Rubik-Regular", "sans-serif"],
+        "rubik-bold": ["Rubik-Bold", "sans-serif"],
+        "rubik-extrabold": ["Rubik-ExtraBold", "sans-serif"],
+        "rubik-medium": ["Rubik-Medium", "sans-serif"],
+        "rubik-semibold": ["Rubik-SemiBold", "sans-serif"],
+        "rubik-light": ["Rubik-Light", "sans-serif"],
+      },
     },
   },
   plugins: [],

@@ -18,11 +18,11 @@ const FacilitiesIcons = ({name , icon}:propsType) => {
   
   
  <View
-    className='  flex-col items-center bg-blue-300 w-24 '
+    className='  flex-col items-center  w-24  '
     >
         {/* container for icons */}
       <View
-      className=' justify-center items-center  bg-green-300 size-14  rounded-full p-2 mb-1 '
+      className=' justify-center items-center  bg-primary-200 size-14  rounded-full p-2 mb-1 '
       >
       <Image 
         source={icon}
