@@ -10,7 +10,7 @@ const PropertyCard = () => {
     
     ">
       {/* For image */}
-      <ImageBackground source={images.newYork} className="  h-48  w-44 rounded-2xl ">
+      <ImageBackground source={images.newYork} className="  h-48  w-44 rounded-2xl mb-3 ">
         {/* for star */}
         <View style={styles.starContainer}>
           <Image source={icons.star} resizeMode="contain" className="  h-7 w-7 " />
@@ -21,7 +21,7 @@ const PropertyCard = () => {
 
       {/* for texts and heart */}
       <View 
-      className='  mt-3 gap-1 '>
+      className=' gap-1  mb-3'>
 
       <Text className={` text-black `}>La Grand Masion</Text>
 
@@ -29,7 +29,7 @@ const PropertyCard = () => {
 
 </View>
 
-      <View className=" flex-row  items-center justify-between mt-3">
+      <View className=" flex-row  items-center justify-between ">
         <Text className="font-bold text-blue-500">$12219</Text>
         <Image source={icons.heart} resizeMode="contain" className="  h-7 w-7 " />
       </View>

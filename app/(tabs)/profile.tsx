@@ -6,17 +6,17 @@ import icons from '../../constants/icons';
 
 const Profile = () => {
   return (
-    <SafeAreaView className={nativewind.screen}>
+    <SafeAreaView className='flex-1 pl-4 pr-4 p-4 bg-white '>
       <ScrollView>
         {/* For images */}
-        <View className="  flex-col items-center justify-center gap-3 bg-green-300">
-          <Image source={images.avatar} className="  size-40 rounded-full" />
+        <View className="  flex-col items-center justify-center gap-3 ">
+          <Image source={images.avatar} className="  size-32 rounded-full" />
           <Text>John Doe</Text>
         </View>
 
         {/* for horizontal line */}
         {/* <View className=" mt-8 border-b border-t  border-[#E6F0FF]"> */}
-        <View style={{        borderBottomColor: '#E6F0FF',}}>
+        <View style={{ borderBottomColor: '#E6F0FF',}}>
 
 
           {/* container for payments and booking */}
@@ -65,6 +65,3 @@ export default Profile;
 
 const styles = StyleSheet.create({});
 
-const nativewind = {
-  screen: 'flex-1 pl-4 pr-4 p-4 bg-white ',
-};

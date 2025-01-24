@@ -13,7 +13,6 @@ const Home = () => {
       <ScrollView
       showsVerticalScrollIndicator={false}
       >
-
       {/* <Text>Home</Text> */}
       <Header />
       <Search />

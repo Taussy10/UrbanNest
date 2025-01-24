@@ -8,7 +8,9 @@ import Recom from '~/components/home/recom'
 import PropertyCard from '~/components/home/PropertyCard'
 const Explore = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView
+    className='flex-1 pl-4 pr-4 p-4 bg-white '
+    >
       <ScrollView
        showsVerticalScrollIndicator= {false}
        >
@@ -21,12 +23,11 @@ const Explore = () => {
     
     {/* for selecting categories */}
     <View 
-    className={nativewind.category}
-    >
- <Text className={`${nativewind.text}  font-bold  `}>House</Text>
-    </View>
+       className= " w-20 mb-3 rounded-3xl h-12 p-1 bg-blue-500 flex-row justify-center items-center" >
+    <Text className=" font-bold text-white  ">House</Text>
+       </View>
 
-<Text>Found 182 Apartments</Text>
+<Text className=' text-xl font-semibold mb-5 '>Found 182 Apartments</Text>
 {/* Image card */}
 <PropertyCard />
       </ScrollView>

@@ -9,18 +9,20 @@ const Featured = () => {
   return (
     // container for component
     <View className=' mb-5'>
-      {/* Heading */}
-      <View className=" flex-row justify-between  mb-3">
+      {/* will have two comps 1.Texts and 2nd Image */}
+
+      {/* Texts container */}
+      <View className=" flex-row justify-between items-center  mb-3">
         <Text className=' text-2xl  font-semibold'>Featured</Text>
-        <Text className="text-blue-500">See All</Text>
+        <Text className="text-blue-500 text-xl font-bold">See All</Text>
       </View>
 
       {/* container for image */}
       <TouchableOpacity
-      activeOpacity={0.7}
-      onPress={() =>router.push('/details')}
-      >
-        <ImageBackground source={images.newYork} className="  h-72     w-52 rounded-2xl ">
+      activeOpacity={0.8}
+      onPress={() =>router.push('/details')}>
+
+        <ImageBackground source={images.newYork} className="  h-72 w-52 rounded-2xl ">
 
           {/* for star */}
           <View style={styles.starContainer}>
