@@ -17,7 +17,7 @@
         "expo-splash-screen",
         {
           "backgroundColor": "#232323",
-          "image": "./assets/images/splash.png",
+          "image": "./assets/images/favicon.png",
           "dark": {
             "image": "./assets/splash-icon-dark.png",
             "backgroundColor": "#000000"
@@ -31,7 +31,7 @@
       "tsconfigPaths": true
     },
     "orientation": "portrait",
-    "icon": "./assets/images/splash.png",
+    "icon": "./assets/images/favicon.png",
     "userInterfaceStyle": "light",
     
     "splash": {

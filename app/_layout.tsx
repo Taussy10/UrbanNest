@@ -25,6 +25,7 @@ const RootLayout = () => {
 
   if (!loaded && !error) {
     return null;
+    
   }
   return (
     <Stack
@@ -32,7 +33,7 @@ const RootLayout = () => {
     >
       <Stack.Screen name='index' />
       <Stack.Screen name='(tabs)' />
-      <Stack.Screen name='test' />
+      {/* <Stack.Screen name='test' /> */}
     </Stack>
   )
 }

@@ -1,4 +1,3 @@
-// import google from "../assets/icons/google.png";
 import google from '../assets/icons/google.png'
 import home from "../assets/icons/home.png";
 import search from "../assets/icons/search.png";
