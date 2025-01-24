@@ -26,7 +26,7 @@ const Details = () => {
         </View>
 
         {/* mainGroup-2: DetailsGroup: wrap it in View cause it has >1 elements(subGroups) */}
-        <View className='flex-1 pl-4 pr-4   bg-white '>
+        <View className='flex-1 pl-4 pr-4   bg-white  mb-6'>
   
           {/* 1. Title & Basic Info container: it  will have 3 groups: title , stars and basic info */}
           <View
@@ -34,15 +34,20 @@ const Details = () => {
           >
             {/* Title */}
             <View
-            className=' mb-1'
+            className=' mb-3'
             >
               <Text className=' font-semibold text-2xl '>Modernica Apartment</Text>
             </View>
 
             {/*star and apartment  */}
             <View className=" flex-row gap-2 mb-3 items-center">
-              {/* cause one element so no container */}
-              <Text className=" font-bold  text-xl text-[#0061FF]  ">Aparrment</Text>
+              {/* container for bg color rounded */}
+              <View
+              className="  rounded-full  bg-primary-200 p-2 "
+              >
+              <Text className=" font-bold  text-[12px] text-[#0061FF]  ">Apartment</Text>
+              </View>
+
 
               {/* for star and text */}
               <View className=" flex-row items-center  ">
@@ -73,7 +78,7 @@ const Details = () => {
 
 
           {/* Agent Container: will have text , and 2 groups 1. pfp &name 2. icons  */}
-          <View className=" mb-4 ">
+          <View className=" mb-4">
             {/* Has two subgroups: Agent contact with name and overview */}
             <Text className=' text-2xl mb-2  font-bold'>Agent</Text>
 
@@ -114,7 +119,7 @@ flow row and we don't want that that's why wraped
 
               {/* Overview container: single  element  */}
             <View className=" mb-4">
-              <Text className='text-2xl mb-2  font-bold'>Overview</Text>
+              <Text className='text-2xl mb-1  font-bold'>Overview</Text>
               <Text className='  text-gray-500 text-[16px]'>
                 Sleek, modern 2-bedroom apartment with open living space, high-end finishes, and
                 city views. Minutes from downtown, dining, and transit.
@@ -126,14 +131,14 @@ flow row and we don't want that that's why wraped
             <Text className=' text-2xl mb-3  font-bold' >Facilities</Text>
 
             {/* this method isn't great for aligining will look for diff methods */}
-            <View className=" flex-row">
+            <View className=" flex-row mb-3">
               <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
               <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
               <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
               <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
             </View>
 
-            <View className=" mt-5 flex-row">
+            <View className="  flex-row">
               <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
               <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
               <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
@@ -169,7 +174,7 @@ flow row and we don't want that that's why wraped
 
           {/* for reviews */}
           <View
-          className=' mb-5'>
+          className=' mb-6'>
             {/* for stars and select all */}
             <View className=" flex-row items-center mb-2  justify-between">
               <View className=" flex-row items-center ">
@@ -199,7 +204,7 @@ flow row and we don't want that that's why wraped
               {/* for heart and count */}
 
               <View className=" flex-row  items-center gap-2">
-                <Image source={icons.heart} className="  size-7  bg-blue-500" />
+                <Image source={icons.blueHeart} className="  size-7  border-blue-500  text-blue-500" />
                 <Text>938</Text>
               </View>
 
@@ -209,7 +214,7 @@ flow row and we don't want that that's why wraped
           </View>
 
           {/* For price and Button */}
-          <View className=" flex-row items-center justify-between mb-4">
+          <View className=" flex-row items-center justify-between ">
             {/* why have we put  Price text and number inside container ? Look in parent there is flex row then children will flex row but we don't want that 
             that's why we have wrapped inside view and view by default flex-col*/}
             <View>

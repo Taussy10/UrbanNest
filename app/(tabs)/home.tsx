@@ -28,6 +28,6 @@ const Home = () => {
 export default Home
 
 const nativewind = {
-  screen: 'flex-1 pl-4 pr-4 p-4  bg-[#ffffff] ',
+  screen: 'flex-1 pl-4 pr-4 p-4    bg-[#ffffff] ',
 
 };

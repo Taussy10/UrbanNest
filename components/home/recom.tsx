@@ -4,9 +4,9 @@ import PropertyCard from './PropertyCard'
 
 const Recom = () => {
   return (
-    <View>
+    <View className=' mb-5'>
              {/* Heading */}
-              <View className=" flex-row justify-between ">
+              <View className=" flex-row justify-between  mb-3">
                 <Text>Our Recommendation</Text>
                 <Text className="text-blue-500">See All</Text>
               </View>

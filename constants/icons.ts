@@ -32,6 +32,7 @@ import swim from "../assets/icons/swim.png";
 import wifi from "../assets/icons/wifi.png";
 import location from "../assets/icons/location.png";
 import edit from "../assets/icons/edit.png";
+import blueHeart from "../assets/icons/blueHeart.png"
 
 export default {
   google,
@@ -51,6 +52,7 @@ export default {
   shield,
   wallet,
   rightArrow,
+  blueHeart,
   send,
   bed,
   bath,

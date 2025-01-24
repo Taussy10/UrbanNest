@@ -22,5 +22,5 @@ const Search = () => {
 export default Search;
 
 const Styles = {
-  component: ' mt-4 flex-row justify-between items-center bg-[#FBFBFD] pb-2 pr-2  pl-2 rounded-lg',
+  component: '  mb-5 flex-row justify-between items-center bg-[#FBFBFD] pb-2 pr-2  pl-2 rounded-lg',
 };

@@ -7,7 +7,7 @@ const Header = () => {
   return (
     //  bg-green-300
     <View
-      className="  flex-row  items-center justify-between
+      className="  flex-row  items-center justify-between  mb-5 mt-5
     
     ">
       {/* bg-orange-300  cotntainer for right side image and text */}

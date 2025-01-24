@@ -8,10 +8,10 @@ const Featured = () => {
 
   return (
     // container for component
-    <View>
+    <View className=' mb-5'>
       {/* Heading */}
-      <View className=" flex-row justify-between ">
-        <Text>Featured</Text>
+      <View className=" flex-row justify-between  mb-3">
+        <Text className=' text-2xl  font-semibold'>Featured</Text>
         <Text className="text-blue-500">See All</Text>
       </View>
 
@@ -20,7 +20,7 @@ const Featured = () => {
       activeOpacity={0.7}
       onPress={() =>router.push('/details')}
       >
-        <ImageBackground source={images.newYork} className="  h-72    w-52 rounded-2xl ">
+        <ImageBackground source={images.newYork} className="  h-72     w-52 rounded-2xl ">
 
           {/* for star */}
           <View style={styles.starContainer}>
