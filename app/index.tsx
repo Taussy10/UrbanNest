@@ -4,13 +4,26 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import images from '~/constants/images'
 import icons from '~/constants/icons'
 import { useRouter } from 'expo-router'
+import { config, createUser } from '~/appwrite/appwrite'
 
 const Onboarding = () => {
 
+  console.log(config.platform);
+  console.log(config.endpoint);
+  console.log(config.projectId);
+  
   const router = useRouter()
 
-  const move = () => {
-    router.replace('/(tabs)/home')
+  const Login = async() => {
+    try {
+      await createUser()
+      router.replace('/home')
+    } catch (error) {
+      console.log(error);
+      return;
+      
+    }
+    
   }
   return (
     <SafeAreaView
@@ -44,7 +57,7 @@ contentContainerClassName='h-full'
 <TouchableOpacity
       activeOpacity={0.7}
       className= '  bg-white h-12  shadow-lg p-3  shadow-zinc-400 w-[85%]   rounded-full  justify-center items-center'
-      onPress={move}
+      onPress={Login}
       >
 
 {/* for cenering icns and text */}
