@@ -25,7 +25,8 @@ contentContainerClassName='h-full'
 {/* Image container although only one elment */}
 {/* <View className='  flex- mb-6 '> */}
   <Image source={images.onboarding} 
-  className=' w-full h-4/6   mb-6'
+  // crop the Image from bottom later
+  className=' w-full h-4/6  '
   />
 {/* </View> */}
 
@@ -38,11 +39,11 @@ contentContainerClassName='h-full'
   <Text className=' text-primary-300 '>Your Ideal Home</Text>
 </Text>
 
-<Text className=' text-lg  mb-8 font-rubik text-black-200 text-center'>Login to Real Scout with Google</Text>
+<Text className=' text-lg    font-rubik text-black-200 text-center'>Login to Real Scout with Google</Text>
 
 <TouchableOpacity
       activeOpacity={0.7}
-      className= '  bg-white h-12  shadow-md  shadow-zinc-300 w-[85%]   rounded-full  justify-center items-center'
+      className= '  bg-white h-12  shadow-lg p-3  shadow-zinc-400 w-[85%]   rounded-full  justify-center items-center'
       onPress={move}
       >
 
