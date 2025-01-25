@@ -10,9 +10,7 @@ import { useContext } from 'react'
 import { AuthContext } from '~/appwrite/global-content'
 
 const Home = () => {
-const fetchCurrentUser = async() => {
-  await Logout()  
-} 
+
 
 
 
@@ -23,7 +21,6 @@ const fetchCurrentUser = async() => {
       <ScrollView
       showsVerticalScrollIndicator={false}
       >
-<Button title='user' onPress={fetchCurrentUser} />    
       {/* <Text>Home</Text> */}
       <Header />
       <Search />

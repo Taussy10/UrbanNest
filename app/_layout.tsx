@@ -5,6 +5,9 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import {useEffect} from 'react';
 import { Stack } from 'expo-router';
+import GlobalContext from '~/appwrite/global-content';
+import { useGlobalContext } from '~/appwrite/global-content'
+import { Redirect } from 'expo-router';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -27,14 +30,28 @@ const RootLayout = () => {
     return null;
     
   }
+
+
+  // const {user , loggedIn} = useGlobalContext()
+  // console.log(user ,loggedIn);
+  
+  // if (user !==null && loggedIn) {
+  //   // it's a component so we have to put either inside jsx or 
+  //   // return it 
+  //  return <Redirect href={"/home"} />
+    
+  // }
   return (
+    <GlobalContext>
+
     <Stack
-    screenOptions={{headerShown: false}}
-    >
+    screenOptions={{headerShown: false}}    >
       <Stack.Screen name='index' />
       <Stack.Screen name='(tabs)' />
       {/* <Stack.Screen name='test' /> */}
     </Stack>
+    </GlobalContext>
+
   )
 }
 

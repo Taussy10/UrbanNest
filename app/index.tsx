@@ -1,5 +1,5 @@
 import { Alert, Button, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import {useEffect} from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import images from '~/constants/images'
 import icons from '~/constants/icons'
@@ -7,11 +7,22 @@ import { Redirect, useRouter } from 'expo-router'
 import { config, createUser } from '~/appwrite/appwrite'
 import * as Linking from "expo-linking"
 import { getCurrentUser, Logout } from '~/appwrite/appwrite'
+import { useGlobalContext } from '~/appwrite/global-content'
 
 
 
 const Onboarding = () => {  
   const router = useRouter()
+const {user , loggedIn , loading} = useGlobalContext()
+
+//  && loading && !loading
+if (user !==null && loggedIn ) {
+  // it's a component so we have to put either inside jsx or 
+  // return it 
+ return <Redirect href={"/home"} />
+  
+}
+console.log(user ,loggedIn);
 
 
   const Login = async() => {
@@ -64,6 +75,8 @@ contentContainerClassName='h-full'
 
 <TouchableOpacity
       activeOpacity={0.7}
+      // i've disabled the button so that no one clicks it if loggedIn = true then disable it 
+      disabled={loggedIn}
       className= '  bg-white h-12  shadow-lg p-3  shadow-zinc-400 w-[85%]   rounded-full  justify-center items-center'
       onPress={Login}
       >
@@ -80,7 +93,6 @@ contentContainerClassName='h-full'
         </View>
 
       </TouchableOpacity>
-<Button title='Open url' onPress={getCurrentUser} />
 
   </View>
 
