@@ -1,18 +1,29 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Header from '~/components/home/header'
 import Search from '~/components/home/search'
 import Featured from '~/components/home/featured'
 import Recom from '~/components/home/recom'
+import { getCurrentUser, Logout } from '~/appwrite/appwrite'
+import { useContext } from 'react'
+import { AuthContext } from '~/appwrite/global-content'
 
 const Home = () => {
+const fetchCurrentUser = async() => {
+  await Logout()  
+} 
+
+
+
+
   return (
     <SafeAreaView
     className={nativewind.screen}>
       <ScrollView
       showsVerticalScrollIndicator={false}
       >
+<Button title='user' onPress={fetchCurrentUser} />    
       {/* <Text>Home</Text> */}
       <Header />
       <Search />

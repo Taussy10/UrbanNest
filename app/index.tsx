@@ -1,30 +1,38 @@
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Alert, Button, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import images from '~/constants/images'
 import icons from '~/constants/icons'
-import { useRouter } from 'expo-router'
+import { Redirect, useRouter } from 'expo-router'
 import { config, createUser } from '~/appwrite/appwrite'
+import * as Linking from "expo-linking"
+import { getCurrentUser, Logout } from '~/appwrite/appwrite'
 
-const Onboarding = () => {
 
-  console.log(config.platform);
-  console.log(config.endpoint);
-  console.log(config.projectId);
-  
+
+const Onboarding = () => {  
   const router = useRouter()
 
+
   const Login = async() => {
+    const response = await createUser()
+
+    if (response) {
+      router.replace('/home')
+      
+    }else{
+      Alert.alert("Error", "Not authorize")
+    }
     try {
-      await createUser()
+      // await createUser()
       router.replace('/home')
     } catch (error) {
       console.log(error);
       return;
       
     }
-    
-  }
+    }
+
   return (
     <SafeAreaView
     className=' flex-1 bg-white'
@@ -70,10 +78,12 @@ contentContainerClassName='h-full'
         <Text className=' text-lg font-rubik-medium  text-black-300 '>Sign Up with Google</Text>
 
         </View>
-      </TouchableOpacity>
 
+      </TouchableOpacity>
+<Button title='Open url' onPress={getCurrentUser} />
 
   </View>
+
 
 
 

@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "Real-State",
-    "slug": "Real-State",
+    "name": "UrbanNest",
+    "slug": "UrbanNest",
     "version": "1.0.0",
-    "scheme": "real-state",
+    "scheme": "UrbanNest",
     "newArchEnabled": true,
     "web": {
       "bundler": "metro",

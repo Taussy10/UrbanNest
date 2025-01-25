@@ -224,8 +224,8 @@ flow row and we don't want that that's why wraped
 
             <TouchableOpacity
               activeOpacity={0.8}
-              className="  w-44 flex-row   items-center justify-center rounded-full bg-[#0061FF]  p-5 ">
-              <Text className=" font-bold text-white  ">Book Now</Text>
+              className="  w-40 p-3 flex-row   items-center justify-center rounded-full bg-[#0061FF]   ">
+              <Text className=" font-bold text-xl text-white  ">Book Now</Text>
             </TouchableOpacity>
           </View>
 
