@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import PropertyCard from './PropertyCard'
+import { PropertyCard } from './cards'
 
 const Recom = () => {
   return (
     // Component container
-    <View className=' mb-0'>
+    <View className='  '>
 
       {/* will have 3 groups
       1. Heading , Category , 3 Image
@@ -24,7 +24,11 @@ const Recom = () => {
 
 
 {/* Image card */}
-<PropertyCard />
+<View className=' flex  flex-row mr-10 items-center'>
+<PropertyCard/> 
+<PropertyCard/> 
+</View>
+
     </View>
   )
 }

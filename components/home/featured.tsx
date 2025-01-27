@@ -3,47 +3,26 @@ import React from 'react';
 import images from '~/constants/images';
 import icons from '~/constants/icons';
 import { useRouter } from 'expo-router';
+import { FeaturedCard } from './cards';
+
 const Featured = () => {
   const router = useRouter()
-
+  const onPress = () => {
+      
+  }
   return (
+
     // container for component
     <View className=' mb-5'>
       {/* will have two comps 1.Texts and 2nd Image */}
 
       {/* Texts container */}
       <View className=" flex-row justify-between items-center  mb-3">
-        <Text className=' text-2xl  font-semibold'>Featured</Text>
-        <Text className="text-blue-500 text-xl font-bold">See All</Text>
+        <Text className=' text-2xl   font-rubik-bold  '>Featured</Text>
+        <Text className="text-blue-500 text-xl font-rubik-bold ">See All</Text>
       </View>
-
-      {/* container for image */}
-      <TouchableOpacity
-      activeOpacity={0.8}
-      onPress={() =>router.push('/details')}>
-
-        <ImageBackground source={images.newYork} className="  h-72 w-52 rounded-2xl ">
-
-          {/* for star */}
-          <View style={styles.starContainer}>
-            <Image source={icons.star} resizeMode="contain" className="  h-7 w-7 " />
-            <Text className="  font-bold text-blue-500">4.8</Text>
-          </View>
-
-
-          {/* for image text */}
-          <View style={{ position: 'absolute', bottom: 10, paddingLeft: 8, paddingRight: 8 }}>
-            <Text className={`${nativewind.text}  font-bold `}>Merialla Villa</Text>
-            <Text className={nativewind.text}>New York, US</Text>
-
-            {/* for heart */}
-            <View className=" w-full flex-row items-center justify-between ">
-              <Text className={`${nativewind.text} font-bold `}>$12219</Text>
-              <Image source={icons.heart} resizeMode="contain" className="  h-7 w-7 " />
-            </View>
-          </View>
-        </ImageBackground>
-      </TouchableOpacity>
+<FeaturedCard onPress={onPress} />
+     
     </View>
   );
 };
@@ -60,8 +39,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
-    backgroundColor: 'lightgrey',
+    backgroundColor: 'white',
     borderRadius: 8,
+    paddingTop: 2,
+    paddingBottom: 2,
   },
 });
 

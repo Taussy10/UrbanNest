@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <SafeAreaView className="flex-1 p-4    bg-white ">
       <ScrollView 
-      className=' bg-green-500 pb-24'
+      className='  pb-56 '
       showsVerticalScrollIndicator={false}
     
       >

@@ -5,7 +5,8 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Header from '~/components/home/header'
 import Search from '~/components/home/search'
 import Recom from '~/components/home/recom'
-import PropertyCard from '~/components/home/PropertyCard'
+import { PropertyCard } from '~/components/home/cards'
+
 const Explore = () => {
   return (
     <SafeAreaView
