@@ -8,9 +8,15 @@
 
 // Named export
 import { users } from "./users.js ";
+
 // Default export
 import products from "./products.js";
+
+
+// Export default from user.js 
+import name from "./users.js";
 
 console.log(products);
 
 console.log(users);
+console.log(name());
