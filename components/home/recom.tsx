@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { PropertyCard } from './cards'
+import Filters from './filters'
 
 const Recom = () => {
   return (
     // Component container
-    <View className='  '>
+    <View className='     mb-72'>
 
       {/* will have 3 groups
       1. Heading , Category , 3 Image
@@ -17,12 +18,17 @@ const Recom = () => {
                    </View>
     
     {/* 2. categories Container */}
-    <View 
-    className= " w-20 mb-3 rounded-3xl h-12 p-1 bg-blue-500 flex-row justify-center items-center" >
- <Text className=" font-bold text-white  ">House</Text>
-    </View>
+    {/* don't know why gap isn't working */}
+    {/* <View className='  flex-row  gap-5 items-center'>
+    <Filters title="All" />
+    <Filters title="House" />
+    <Filters title="Villa" />
+    <Filters title="House" />
+   
 
-
+   
+    </View> */}
+    <Filters title="Villa" />
 {/* Image card */}
 <View className=' flex  flex-row mr-10 items-center'>
 <PropertyCard/> 

@@ -4,7 +4,9 @@
 
 // for example we have two files: product and users
 // and we want to use it in index.js
-// so how ?
+// so how ? by Named export and default export 
+
+// firstly these are just syntax so don'worry about it
 
 // Named export
 import { users } from "./users.js ";

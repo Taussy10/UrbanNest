@@ -1,5 +1,5 @@
 
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { KeyboardAvoidingView, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Header from '~/components/home/header'
@@ -13,8 +13,8 @@ const Explore = () => {
     className='flex-1 pl-4 pr-4 p-4 bg-white '
     >
       <ScrollView
-       showsVerticalScrollIndicator= {false}
-       >
+       showsVerticalScrollIndicator= {false}>
+
 
       <Header />
    <Search />
@@ -32,6 +32,7 @@ const Explore = () => {
 {/* Image card */}
 <PropertyCard />
       </ScrollView>
+    
 
     </SafeAreaView>
   )

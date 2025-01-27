@@ -3,12 +3,13 @@ import React from 'react';
 import images from '~/constants/images';
 import icons from '~/constants/icons';
 import { useRouter } from 'expo-router';
+// nothing problem in exported using Named exported concept
 import { FeaturedCard } from './cards';
 
 const Featured = () => {
   const router = useRouter()
   const onPress = () => {
-      
+    router.push('/details')
   }
   return (
 
@@ -21,7 +22,17 @@ const Featured = () => {
         <Text className=' text-2xl   font-rubik-bold  '>Featured</Text>
         <Text className="text-blue-500 text-xl font-rubik-bold ">See All</Text>
       </View>
-<FeaturedCard onPress={onPress} />
+
+
+      <FeaturedCard />
+{/* <FeaturedCard 
+onPress={onPress} 
+starIcon= {icons.star}
+heartIcon= {icons.heart}
+/> */}
+
+
+
      
     </View>
   );
