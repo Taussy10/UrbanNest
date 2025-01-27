@@ -3,12 +3,22 @@ import { Tabs } from 'expo-router';
 import icons from '~/constants/icons';
 import images from '~/constants/images';
 
-const TabIcon = ({icon}) => {
+type tabIconType = {
+icon: any,
+
+title: string,
+color: string,
+
+}
+
+const TabIcon = ({icon ,  title ,color }:tabIconType) => {
   return(
-    <View className=' items-center'>
+    <View className=' flex-col items-center w-10   pt-5'>
       <Image source={icon}
       className=' size-7 '
+      tintColor={color}
       />
+      <Text className=' text-[10px]'>{title}</Text>
     </View>
   )
 }
@@ -18,18 +28,32 @@ const TabsLayout = () => {
 
   return (
     <Tabs
-    screenOptions={{headerShown: false}}
+    screenOptions={{
+      headerShown: false,
+      tabBarShowLabel: false,
+      tabBarStyle: {
+        backgroundColor: 'white',
+        position: 'absolute',
+        borderTopColor: '#0061ff1a',
+        borderTopWidth: 1,
+        minHeight: 70,
+      }
+
+
+    }}
     >
       <Tabs.Screen 
 
       options={{
         // by default file name will attached so for change it use
         // title key
-       title: "Home",        
-        tabBarIcon: ({focused , color}) => (
+           
+        tabBarIcon: ({ color}) => (
         <TabIcon 
         icon= {icons.home}
-        
+        title = "Home"
+        color = {color}
+
         />
          
         )
@@ -39,11 +63,14 @@ const TabsLayout = () => {
 
       <Tabs.Screen name='explore' 
        options={{
-               title: "Explore",        
+                   
 
-        tabBarIcon: ({focused}) => (
+        tabBarIcon: ({color}) => (
         <TabIcon 
         icon= {icons.search}
+        title='Explore'  
+        color={color}
+
         
         />
          
@@ -55,9 +82,12 @@ const TabsLayout = () => {
        options={{
         title: "Profile",        
 
-        tabBarIcon: ({focused}) => (
+        tabBarIcon: ({focused , color}) => (
         <TabIcon 
         icon= {icons.person}
+        title = "Profile"
+        color={color}
+
         
         />
          
