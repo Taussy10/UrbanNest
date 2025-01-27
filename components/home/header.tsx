@@ -2,26 +2,31 @@ import { View, Text, Image } from 'react-native';
 import React from 'react';
 import icons from '../../constants/icons';
 import images from '~/constants/images';
+import { useAuthContext } from '~/context/auth-context';
 
 const Header = () => {
+  const { user} = useAuthContext()
+
+  console.log("User :", user);
+  
   return (
 
     // header container(having 2 groups 1.Header-pfp-name , 2. Notification)
     <View
-      className="  flex-row  items-center justify-between  mb-5
-    ">
+      className="  flex-row  items-center justify-between  mb-5">
 
-      {/* subGroup1: Header-pfp-name cotntainer for right side image and text */}
+      {/* subGroup1: Headerf-pfp-name cotntainer for right side image and text */}
       <View
         className="flex-row  items-center  gap-2 ">
 
-      <Image source={images.avatar} resizeMode="contain" className=" size-14  " />
+      <Image source={{uri: user?.avatar}} resizeMode="contain" 
+      className="  size-14  rounded-full" />
         
         {/* we have to wrap in container cause we want them to flex-col and 
         by default views are flex-col*/}
         <View>
           <Text className=' text-[14px] text-gray-500'>Good Morning</Text>
-          <Text className=' text-xl font-bold  text-black'>John Doe</Text>
+          <Text className=' text-xl font-bold  text-black'>{user?.name}</Text>
         </View>
       </View>
 

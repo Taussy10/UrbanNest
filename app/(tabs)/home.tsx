@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View, Button } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, Button , StatusBar } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '~/components/home/header';
@@ -11,9 +11,13 @@ import { AuthContext } from '~/context/auth-context';
 
 const Home = () => {
   return (
-    <SafeAreaView className={nativewind.screen}>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        {/* <Text>Home</Text> */}
+    <SafeAreaView className="flex-1 p-4    bg-white ">
+      <ScrollView 
+      className=' bg-green-500 pb-24'
+      showsVerticalScrollIndicator={false}
+    
+      >
+        
         <Header />
         <Search />
         <Featured />
@@ -25,6 +29,3 @@ const Home = () => {
 
 export default Home;
 
-const nativewind = {
-  screen: 'flex-1 pl-4 pr-4 p-4    bg-[#ffffff] ',
-};

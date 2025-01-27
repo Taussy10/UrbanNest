@@ -14,7 +14,7 @@ const Profile = () => {
   console.log(user);
   
   return (
-    <SafeAreaView className='flex-1 pl-4 pr-4 p-4 bg-white '>
+    <SafeAreaView className='flex-1 p-4  bg-white '>
       <ScrollView
       // (property) showsVerticalScrollIndicator?: boolean | undefined
       // here property shows that it's a prop 
@@ -27,7 +27,7 @@ const Profile = () => {
       >
 
 {/*Container for header */}
-<View className=' flex-row justify-between items-center  mt-5 mb-5 
+<View className=' flex-row justify-between items-center  mb-5 
  
 '>
 <Text className=' text-lg'>Profile</Text>  
