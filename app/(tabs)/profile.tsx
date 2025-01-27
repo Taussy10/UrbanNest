@@ -3,34 +3,16 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import images from '~/constants/images';
 import icons from '../../constants/icons';
+import { useAuthContext } from '~/context/auth-context';
 
-type settingsItemProp = {
-  icon: ImageSourcePropType,
-  title: string,
-  onPress: () => void
-}
+import SettingsItem  from '~/components/profile/settings-item';
 
-// custom comp for each component
-const SettingsItem = ({onPress , icon , title }:settingsItemProp) => {
-  return (
-    <TouchableOpacity
-    activeOpacity={0.6}
-    onPress={onPress}
-    className=' flex  bg-green-500 flex-row items-center justify-between py-3'
-    >
-        <View className=" flex-row  items-center gap-2">
-              <Image source={icon} resizeMode="contain" className="  h-7 w-7 " />
-              <Text>{title}</Text>
-            </View>
 
-            <View>
-              <Image source={icons.rightArrow} resizeMode="contain" className="  h-7 w-7 " />
-            </View>
-    </TouchableOpacity>
-  )
-}
 
 const Profile = () => {
+  const {user} = useAuthContext()
+  console.log(user);
+  
   return (
     <SafeAreaView className='flex-1 pl-4 pr-4 p-4 bg-white '>
       <ScrollView
@@ -58,8 +40,10 @@ source={icons.bell} />
         {/* Container for Avatar and text */}
         <View className="  flex-col items-center justify-center 
         gap-3 mb-4  ">
-          <Image source={images.avatar} className="  size-32 rounded-full" />
-          <Text className=' text-xl  font-rubik-medium'>John Doe</Text>
+          <Image source={{uri: user?.avatar}} className="  size-32 rounded-full" />
+          {/* w-full is if the big name then it can get also text center for centering the text */}
+          {/* will be optional cause in starting we won't have when we login */}
+          <Text className=' text-xl  font-rubik-medium uppercase  w-full  text-center'>{user?.name}</Text>
         </View>
 
 
