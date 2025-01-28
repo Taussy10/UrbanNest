@@ -33,6 +33,7 @@ const Home = () => {
       <FlatList
         // number of times we want to render items
         data={[1, 2]}
+        // data={[1]}
         contentContainerClassName="pb-32 "
         // columnWrapperClassName="flex gap-5 px-5"
         showsVerticalScrollIndicator={false}

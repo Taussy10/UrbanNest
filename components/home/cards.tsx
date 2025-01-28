@@ -47,37 +47,42 @@ export const FeaturedCard = ({onPress , starIcon, heartIcon}:FeaturedCardProps) 
 
 
 
+//  // mr-8       {/* for texts and heart */}
+// export const PropertyCards = () => {
+//   return (
+//     // <View
+   
 
-export const PropertyCard = () => {
-  return (
-    <View
-      className=" w-44 mr-8  rounded-lg bg-[#04060F0D]  p-4
+//     //   className="  rounded-lg bg-[#000] p-1 w-44
+//     // ">
+//       {/* For image */} 
     
-    ">
-      {/* For image */}   {/* for star */}
-    
-      <ImageBackground source={images.newYork}  resizeMode= 'contain' className="  mb-3  h-48 w-40 rounded-2xl ">
+//       // <View>
+       
+//       // <ImageBackground source={images.newYork}  resizeMode= 'contain'
+//       //  className="  mb-3     h-44 rounded-2xl ">
+//       // </ImageBackground>
+//       // </View>
+
+//         {/* <View style={styles.starContainer}>
+//           <Image source={icons.star} resizeMode="contain" className="size-4 " />
+//           <Text className="  font-bold text-blue-500">4.8</Text>
+//         </View>
      
-        <View style={styles.starContainer}>
-          <Image source={icons.star} resizeMode="contain" className="size-4 " />
-          <Text className="  font-bold text-blue-500">4.8</Text>
-        </View>
-      </ImageBackground>
 
-      {/* for texts and heart */}
-      <View className=" mb-3  gap-1">
-        <Text className={` font-rubik-bold  text-base text-black `}>La Grand Masion</Text>
+//       <View className=" mb-3  gap-1">
+//         <Text className={` font-rubik-bold  text-base text-black `}>La Grand Masion</Text>
 
-        <Text className={` text-gray-400 `}>Tokyo ,Japan</Text>
-      </View>
+//         <Text className={` text-gray-400 `}>Tokyo ,Japan</Text>
+//       </View>
 
-      <View className=" flex-row  items-center justify-between ">
-        <Text className="font-bold text-blue-500">$12219</Text>
-        <Image source={icons.heart} resizeMode="contain" className="  h-7 w-7 " />
-      </View>
-    </View>
-  );
-};
+//       <View className=" flex-row  items-center justify-between ">
+//         <Text className="font-bold text-blue-500">$12219</Text>
+//         <Image source={icons.heart} resizeMode="contain" className="  h-7 w-7 " />
+//       </View> */}
+//     {/* </View> */}
+//   );
+// };
 
 const styles = StyleSheet.create({
   starContainer: {
@@ -97,3 +102,32 @@ const styles = StyleSheet.create({
 const nativewind = {
   text: 'text-white',
 };
+
+
+export const PropertyCard = () => {
+  return (
+    <View className=' bg-white rounded-xl  shadow-2xl  mr-3  shadow-[#04060F0D]'>
+     <ImageBackground  source={images.japan}
+     className=' size-44 rounded-2xl  mb-2'
+     >
+      {/* container for star */}
+         <View style={styles.starContainer}>
+         <Image source={icons.star} resizeMode="contain" className="size-4 " />
+      <Text className="  font-bold text-blue-500">4.8</Text>
+       </View>
+      </ImageBackground>
+
+           <View className=" mb-3  gap-1">
+         <Text className={` font-rubik-bold  text-base text-black `}>La Grand Masion</Text>
+
+       <Text className={` text-gray-400 `}>Tokyo ,Japan</Text>
+     </View>
+
+       <View className=" flex-row  items-center justify-between ">
+         <Text className="font-bold text-blue-500">$12219</Text>
+         <Image source={icons.heart} resizeMode="contain" className="  h-7 w-7 " />
+       </View> 
+    </View>
+  )
+}
+
