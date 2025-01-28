@@ -18,7 +18,6 @@ const Search = () => {
 // acme://profile/baconbrix?extra=info params are = extra= info
  const params = useLocalSearchParams<{query?:string}>()
 
-  console.log("Inputvalues :" ,input);
 
   const debouncedSearch = useDebouncedCallback((text: string)=> 
     router.setParams({query:text}), 500) 

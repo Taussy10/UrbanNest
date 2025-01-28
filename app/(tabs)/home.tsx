@@ -10,23 +10,74 @@ import {
   FlatList,
   TouchableOpacity,
 } from 'react-native';
-import React from 'react';
+import {useEffect} from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '~/components/home/header';
 import Search from '~/components/home/search';
 import Featured from '~/components/home/featured';
 import Recom from '~/components/home/recom';
-import { getCurrentUser, Logout } from '~/appwrite/appwrite';
+import { getCurrentUser,getProperties,  getLatestProperties, Logout, config } from '~/appwrite/appwrite';
 import { useContext } from 'react';
 import { AuthContext } from '~/context/auth-context';
 import { FeaturedCard, PropertyCard } from '~/components/home/cards';
 import images from '~/constants/images';
 import icons from '~/constants/icons';
 import Filters from '~/components/home/filters';
-import { router, useRouter } from 'expo-router';
-import { seed } from '~/lib/seed';
+import { router, useLocalSearchParams, useRouter } from 'expo-router';
+import { useAppwrite } from '~/appwrite/useAppwrite';
+import { useState } from 'react';
+
 const Home = () => {
   const router = useRouter()
+  const params = useLocalSearchParams<{query?: string , filter?: string, }>()
+  const [feauredData, setFeauredData] = useState([])
+
+  useEffect(() => {
+    const fetchLatestProperties = async() => {
+      try {
+       const result = await getLatestProperties()
+        setFeauredData(result)
+        console.log("FeaturedData" ,result);
+        
+      } catch (error) {
+       console.log(error);
+      }
+       }
+       fetchLatestProperties()
+
+  }, [])
+  
+
+console.log( "prams" ,params);
+
+
+
+  // const { data: latestProperties, loading: latestPropertiesLoading } =
+  // useAppwrite({
+  //    getLatestProperties,
+  // });  
+
+  // // properties is alias of data
+  // const {data: properties,refetch,loading,} = useAppwrite({
+  //   getProperties,
+  //   params: {
+  //     filter: params.filter!,
+  //     query: params.query!,
+  //     limit: 6,
+  //   },
+  //   skip: true,
+  // });
+
+  // useEffect(() => {
+    
+  //   refetch({
+  //     filter: params.filter!,
+  //     query: params.query!,
+  //     limit: 6,
+  //   })
+  // }, [params.filter , params.query])
+  
+
 
   const moveDetails = () => {
     router.push("/details")
@@ -49,7 +100,7 @@ const Home = () => {
             <Header />
             <Search />
             {/* just for temporor */}
-            {/* <Button title='Move' onPress={() => seed()} /> */}
+            <Button title='Move' onPress={() => getProperties("All", )} />
 
             {/* Featured Header */}
             <View className=" mb-3 flex-row items-center  justify-between">
@@ -65,9 +116,9 @@ const Home = () => {
               // add gap between elements
               contentContainerClassName="flex gap-5  "
         
-              data={[1, 2]}
+              data={feauredData}
             //  keyExtractor={(index) => index.toString() }
-              renderItem={() => <FeaturedCard onPress={moveDetails} />}
+              renderItem={() => <FeaturedCard data={feauredData} onPress={moveDetails} />}
             />
 
 {/* Recommendation Header */}
@@ -83,7 +134,11 @@ const Home = () => {
         numColumns={2}
         // for giving gap between column
         columnWrapperClassName= 'gap-4 px-2'
-        renderItem={({ item }) => <PropertyCard />}
+        renderItem={({ item }) =>{
+          return(
+        <PropertyCard />
+          )
+        } }
       />
     </SafeAreaView>
   );

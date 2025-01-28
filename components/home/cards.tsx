@@ -10,7 +10,9 @@ type FeaturedCardProps = {
 }
 
 
-export const FeaturedCard = ({onPress , starIcon, heartIcon}:FeaturedCardProps) => {
+export const FeaturedCard = ({onPress , starIcon, heartIcon , data}:FeaturedCardProps) => {
+  console.log(data.$id ,"data");
+  
   return (
     <TouchableOpacity activeOpacity={0.8} onPress={onPress}>
       {/* h-72 w-52 */}
