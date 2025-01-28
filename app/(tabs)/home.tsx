@@ -23,7 +23,7 @@ import { FeaturedCard, PropertyCard } from '~/components/home/cards';
 import images from '~/constants/images';
 import icons from '~/constants/icons';
 import Filters from '~/components/home/filters';
-import { router, useLocalSearchParams, useRouter } from 'expo-router';
+import { Link, router, useLocalSearchParams, useRouter } from 'expo-router';
 import { useAppwrite } from '~/appwrite/useAppwrite';
 import { useState } from 'react';
 
@@ -80,7 +80,7 @@ console.log( "prams" ,params);
 
 
   const moveDetails = () => {
-    router.push("/details")
+    router.push("/test")
   }
   return (
     <SafeAreaView className="flex-1 bg-white    p-4 ">
@@ -100,7 +100,9 @@ console.log( "prams" ,params);
             <Header />
             <Search />
             {/* just for temporor */}
-            <Button title='Move' onPress={() => getProperties("All", )} />
+            <Button title='Move' onPress={() => router.push("/test")} />
+            {/* <Link href="/test?id=123&name=John">Go to Profile</Link> */}
+
 
             {/* Featured Header */}
             <View className=" mb-3 flex-row items-center  justify-between">
