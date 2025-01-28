@@ -5,7 +5,7 @@ import { Alert } from "react-native";
 
 const client = new Client()
 const account = new Account(client)
-const databases = new Databases(client)
+export const databases = new Databases(client)
 const avatar = new Avatars(client)
 const storage = new Storage(client)
 

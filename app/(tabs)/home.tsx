@@ -24,6 +24,7 @@ import images from '~/constants/images';
 import icons from '~/constants/icons';
 import Filters from '~/components/home/filters';
 import { router, useRouter } from 'expo-router';
+import { seed } from '~/lib/seed';
 const Home = () => {
   const router = useRouter()
 
@@ -48,7 +49,7 @@ const Home = () => {
             <Header />
             <Search />
             {/* just for temporor */}
-            <Button title='Move' onPress={() => router.push('/flatlist')} />
+            {/* <Button title='Move' onPress={() => seed()} /> */}
 
             {/* Featured Header */}
             <View className=" mb-3 flex-row items-center  justify-between">
