@@ -3,6 +3,9 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
+// How to render this file on screen
+// 1. put in app directory to make it file based routing system 
+// 2. in index.tsx redirect to /flatlist 
 
 // This Flatlist for understanding how it works
 const FlatListComponent = () => {
@@ -38,6 +41,7 @@ const FlatListComponent = () => {
         // e are in array that's why people use index arg
         //  ((e , index: number) => string) | undefined
         keyExtractor={(index) => index.toString()}
+       
         renderItem={(e) => {
           console.log(e);
           return (
@@ -113,6 +117,10 @@ const FlatListComponent2 = () => {
     </View>
   }
 
+  // Very important: when you make horizontal then with renderItem header , 
+  // footer , seprator becomes horizontal 
+
+  horizontal
   // Always write like this helps to console things 
    renderItem={({item, index}) => {
     //  console.log(e);

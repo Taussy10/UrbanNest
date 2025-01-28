@@ -51,12 +51,13 @@ export const FeaturedCard = ({onPress , starIcon, heartIcon}:FeaturedCardProps) 
 export const PropertyCard = () => {
   return (
     <View
-      className=" w-52  rounded-lg bg-[#04060F0D]  p-4
+      className=" w-44 mr-8  rounded-lg bg-[#04060F0D]  p-4
     
     ">
-      {/* For image */}
-      <ImageBackground source={images.newYork} className="  mb-3  h-48 w-44 rounded-2xl ">
-        {/* for star */}
+      {/* For image */}   {/* for star */}
+    
+      <ImageBackground source={images.newYork}  resizeMode= 'contain' className="  mb-3  h-48 w-40 rounded-2xl ">
+     
         <View style={styles.starContainer}>
           <Image source={icons.star} resizeMode="contain" className="size-4 " />
           <Text className="  font-bold text-blue-500">4.8</Text>

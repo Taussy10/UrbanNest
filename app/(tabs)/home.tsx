@@ -1,5 +1,15 @@
-import { ScrollView, StyleSheet, Text, View, Button , StatusBar, Image,ImageBackground,
-   FlatList , TouchableOpacity } from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  StatusBar,
+  Image,
+  ImageBackground,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '~/components/home/header';
@@ -13,60 +23,56 @@ import { FeaturedCard, PropertyCard } from '~/components/home/cards';
 import images from '~/constants/images';
 import icons from '~/constants/icons';
 import Filters from '~/components/home/filters';
+import { router } from 'expo-router';
 const Home = () => {
   return (
-    <SafeAreaView className="flex-1 p-4    bg-white ">
-      <ScrollView 
-      className='  pb-56 '
-      showsVerticalScrollIndicator={false}
-    
-      >
-        <FlatList 
+    <SafeAreaView className="flex-1 bg-white    p-4 ">
+
+
+
+      <FlatList
         // number of times we want to render items
-        data={[1 , 2]}
+        data={[1, 2]}
         contentContainerClassName="pb-32 "
         // columnWrapperClassName="flex gap-5 px-5"
         showsVerticalScrollIndicator={false}
-        keyExtractor={ (item) => item.toString()}
-      //  horizontal
-        renderItem={({item}) => <PropertyCard />}
-         
-        ListHeaderComponent={ 
-        <View>
-   <Header />
-   <Search />
-   <View className=" flex-row justify-between items-center  mb-3">
-           <Text className=' text-2xl  font-semibold'>Featured</Text>
-         <Text className="text-blue-500 text-xl font-bold">See All</Text>
-                    </View>
+        keyExtractor={(item) => item.toString()}
+        ListHeaderComponent={
+          <View>
+            <Header />
+            <Search />
+            {/* just for temporor */}
+            <Button title='Move' onPress={() => router.push('/flatlist')} />
 
-            <FlatList 
-            horizontal
+            {/* Featured Header */}
+            <View className=" mb-3 flex-row items-center  justify-between">
+              <Text className=" text-2xl  font-semibold">Featured</Text>
+              <Text className="text-xl font-bold text-blue-500">See All</Text>
+            </View>
+
+{/* Featured Cards */}
+            <FlatList
+              horizontal
               showsHorizontalScrollIndicator={false}
               // add gap between elements
               contentContainerClassName="flex gap-5  "
-            data={[1,2]}
-            renderItem={()=> <FeaturedCard />}
+              data={[1, 2]}
+              renderItem={() => <FeaturedCard />}
             />
 
+{/* Recommendation Header */}
+            <View className=" mb-3 flex-row items-center  justify-between">
+              <Text className=" text-2xl  font-semibold">Recommendation</Text>
+              <Text className="text-xl font-bold text-blue-500">See All</Text>
+            </View>
 
-
-    <View className=" flex-row justify-between items-center  mb-3">
-           <Text className=' text-2xl  font-semibold'>Recommendation</Text>
-         <Text className="text-blue-500 text-xl font-bold">See All</Text>
-                    </View>
-
-        <Filters />
-
-        </View>
+            <Filters />
+            {/* Ok , I don't have problem with header */}
+          </View>
         }
-        />
-        
-       
-       
-       
-    
-      </ScrollView>
+        numColumns={2}
+        renderItem={({ item }) => <PropertyCard />}
+      />
     </SafeAreaView>
   );
 };

@@ -32,7 +32,7 @@ const Onboarding = () => {
   if (user !== null && loggedIn) {
     // it's a component so we have to put either inside jsx or
     // return it
-    return <Redirect href={'/flatlist'} />;
+    return <Redirect href={'/home'} />;
   }
   console.log(user, loggedIn);
 
