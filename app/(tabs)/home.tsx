@@ -23,8 +23,13 @@ import { FeaturedCard, PropertyCard } from '~/components/home/cards';
 import images from '~/constants/images';
 import icons from '~/constants/icons';
 import Filters from '~/components/home/filters';
-import { router } from 'expo-router';
+import { router, useRouter } from 'expo-router';
 const Home = () => {
+  const router = useRouter()
+
+  const moveDetails = () => {
+    router.push("/details")
+  }
   return (
     <SafeAreaView className="flex-1 bg-white    p-4 ">
 
@@ -37,7 +42,7 @@ const Home = () => {
         contentContainerClassName="pb-32 "
         // columnWrapperClassName="flex gap-5 px-5"
         showsVerticalScrollIndicator={false}
-        keyExtractor={(item) => item.toString()}
+        keyExtractor={(index) => index.toString()}
         ListHeaderComponent={
           <View>
             <Header />
@@ -55,10 +60,13 @@ const Home = () => {
             <FlatList
               horizontal
               showsHorizontalScrollIndicator={false}
+              
               // add gap between elements
               contentContainerClassName="flex gap-5  "
+        
               data={[1, 2]}
-              renderItem={() => <FeaturedCard />}
+            //  keyExtractor={(index) => index.toString() }
+              renderItem={() => <FeaturedCard onPress={moveDetails} />}
             />
 
 {/* Recommendation Header */}
@@ -72,6 +80,8 @@ const Home = () => {
           </View>
         }
         numColumns={2}
+        // for giving gap between column
+        columnWrapperClassName= 'gap-4 px-2'
         renderItem={({ item }) => <PropertyCard />}
       />
     </SafeAreaView>

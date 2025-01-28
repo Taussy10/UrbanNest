@@ -106,7 +106,7 @@ const nativewind = {
 
 export const PropertyCard = () => {
   return (
-    <View className=' bg-white rounded-xl  shadow-2xl  mr-3  shadow-[#04060F0D]'>
+    <View className=' bg-white rounded-xl  shadow-2xl   shadow-[#04060F0D]'>
      <ImageBackground  source={images.japan}
      className=' size-44 rounded-2xl  mb-2'
      >
@@ -117,7 +117,10 @@ export const PropertyCard = () => {
        </View>
       </ImageBackground>
 
-           <View className=" mb-3  gap-1">
+
+
+<View className=' p-2'>
+           <View className=" mb-3    gap-1">
          <Text className={` font-rubik-bold  text-base text-black `}>La Grand Masion</Text>
 
        <Text className={` text-gray-400 `}>Tokyo ,Japan</Text>
@@ -127,6 +130,7 @@ export const PropertyCard = () => {
          <Text className="font-bold text-blue-500">$12219</Text>
          <Image source={icons.heart} resizeMode="contain" className="  h-7 w-7 " />
        </View> 
+       </View>
     </View>
   )
 }
