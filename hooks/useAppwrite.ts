@@ -18,7 +18,7 @@ interface UseAppwriteReturn<T, P> {
 
 
 // const useAppwrite: ({ fn, params, skip, }) => something
-const hello = (a) => {
+const hello = (a:string) => {
     console.log(a);
 }
 hello("Good morning")
@@ -36,12 +36,16 @@ export const useAppwrite = <T, P extends Record<string, string | number>>({
   const [loading, setLoading] = useState(!skip);
   const [error, setError] = useState<string | null>(null);
 
+  // useCallback: to prevent unncessary re-renders
   const fetchData = useCallback(
     async (fetchParams: P) => {
+      // accepts params as fetchParams
       setLoading(true);
       setError(null);
 
       try {
+        // store the result in setData by by fn(real fn will get by
+        //  calling useAppwrite hook)
         const result = await fn(fetchParams);
         setData(result);
       } catch (err: unknown) {
@@ -56,7 +60,7 @@ export const useAppwrite = <T, P extends Record<string, string | number>>({
     [fn]
   );
 
-  useEffect(() => {
+useEffect(() => {
     if (!skip) {
       fetchData(params);
     }

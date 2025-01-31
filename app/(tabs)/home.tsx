@@ -24,20 +24,20 @@ import images from '~/constants/images';
 import icons from '~/constants/icons';
 import Filters from '~/components/home/filters';
 import { Link, router, useLocalSearchParams, useRouter } from 'expo-router';
-import { useAppwrite } from '~/appwrite/useAppwrite';
+import { useAppwrite } from '~/hooks/useAppwrite';
 import { useState } from 'react';
 
 const Home = () => {
   const router = useRouter()
   const params = useLocalSearchParams<{query?: string , filter?: string, }>()
-  const [feauredData, setFeauredData] = useState([])
+  const [recommendProps, setRecommendProps] = useState([])
 
   useEffect(() => {
     const fetchLatestProperties = async() => {
       try {
        const result = await getLatestProperties()
-        setFeauredData(result)
-        console.log("FeaturedData" ,result);
+       setRecommendProps(result)
+        console.log("Recommended Properties :",result);
         
       } catch (error) {
        console.log(error);
@@ -80,7 +80,7 @@ console.log( "prams" ,params);
 
 
   const moveDetails = () => {
-    router.push("/move")
+    router.push("/details")
   }
   return (
     <SafeAreaView className="flex-1 bg-white    p-4 ">
@@ -89,7 +89,7 @@ console.log( "prams" ,params);
 
       <FlatList
         // number of times we want to render items
-        data={[1, 2]}
+        data={recommendProps}
         // data={[1]}
         contentContainerClassName="pb-32 "
         // columnWrapperClassName="flex gap-5 px-5"
@@ -100,7 +100,7 @@ console.log( "prams" ,params);
             <Header />
             <Search />
             {/* just for temporor */}
-            <Button title='Move' onPress={() => router.push("/user")} />
+            <Button title='Move' onPress={() => router.push("/details")} />
           
        
             {/* <Link href="/test?id=123&name=John">Go to Profile</Link> */}
@@ -120,9 +120,9 @@ console.log( "prams" ,params);
               // add gap between elements
               contentContainerClassName="flex gap-5  "
         
-              data={feauredData}
-            //  keyExtractor={(index) => index.toString() }
-              renderItem={() => <FeaturedCard data={feauredData} onPress={moveDetails} />}
+              data={[1,2]}
+             keyExtractor={(index) => index.toString() }
+              renderItem={() => <FeaturedCard  onPress={moveDetails} />}
             />
 
 {/* Recommendation Header */}
@@ -140,7 +140,16 @@ console.log( "prams" ,params);
         columnWrapperClassName= 'gap-4 px-2'
         renderItem={({ item }) =>{
           return(
-        <PropertyCard />
+            <View>
+              <Link
+            href={{
+              pathname: "/properties/[id]",
+              params: {data:item}
+            }}>
+              <PropertyCard />
+              </Link>
+            </View>
+           
           )
         } }
       />

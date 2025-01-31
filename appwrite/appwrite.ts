@@ -143,16 +143,16 @@ export const createUser = async () => {
   // get it by await 
   // by the way by this 
 
-  // for getting Featured properties 
-  export const getLatestProperties = async() => {
+// for getting Recommendation properties
+export const getLatestProperties = async() => {
     try {
       const response = await databases.listDocuments(
         config.databaseId!,
         config.propertiesCollectionId!,
-        [Query.orderAsc("$createdAt"), Query.limit(5)]
+        [Query.orderAsc("$createdAt"), Query.limit(4)]
       )
 
-      console.log("response from getLatestProperties appwrite.ts",response);
+      console.log("response from getLatestProperties appwrite.ts :",response);
       return response.documents;
       
     } catch (error) {
@@ -164,13 +164,15 @@ export const createUser = async () => {
     }
   }
 
-// for getting Recommendation properties
 // accepting three props
 type getPropertiesTypes = {
   filter: string
   query: string,
   limit?: number
 }
+
+
+// For featured properties
   export const getProperties = async({filter, query ,limit}:getPropertiesTypes) => {
 
     try {
