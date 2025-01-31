@@ -154,7 +154,7 @@ export const getLatestProperties = async() => {
 
       console.log("response from getLatestProperties appwrite.ts :",response);
       return response.documents;
-      
+
     } catch (error) {
       console.log(error);
       // means we can't fetch anything
@@ -173,49 +173,99 @@ type getPropertiesTypes = {
 
 
 // For featured properties
-  export const getProperties = async({filter, query ,limit}:getPropertiesTypes) => {
+//   export const getProperties = async({filter, query ,limit}:getPropertiesTypes) => {
 
-    try {
-      // build query variable stores 
- const buildQuery = [Query.orderDesc("$createdAt")]
+//     try {
+//       // build query variable stores 
+//  const buildQuery = [Query.orderDesc("$createdAt")]
 
-if (filter && filter !== "All") {
-  buildQuery.push(Query.equal('type', filter))
+// if (filter && filter !== "All") {
+//   buildQuery.push(Query.equal('type', filter))
   
-}
+// }
 
-if (query) {
+// if (query) {
 
-  buildQuery.push(
-    Query.or(
-      [
-        Query.search('name', query),
-        Query.search('address', query),
-        Query.search('type', query)
-      ]
-    )
-  )
-}
+//   buildQuery.push(
+//     Query.or(
+//       [
+//         Query.search('name', query),
+//         Query.search('address', query),
+//         Query.search('type', query)
+//       ]
+//     )
+//   )
+// }
 
-if (limit) {
+// if (limit) {
 
-  buildQuery.push(Query.limit(limit))
-}
+//   buildQuery.push(Query.limit(limit))
+// }
 
+//       const response = await databases.listDocuments(
+//         config.databaseId!,
+//         config.propertiesCollectionId!,
+//         buildQuery
+//       )
+
+//       console.log("response from appwrite.ts",response);
+//       return response.documents;
+      
+//     } catch (error) {
+//       console.log(error);
+//       // means we can't fetch anything
+//       return[]
+      
+      
+//     }
+//   }
+
+  // getDocument(databaseId: string, collectionId: string, documentId: string, queries?: string[]): Promise<Models.Document>
+
+
+  // How will I know that I need to use async await ?
+  // Hover on databases.listDocuments and know what it returns:
+  // It takes callback function and returs Promise that means it is async 
+  //  Databases.listDocuments(databaseId,collectionId, queries?): Promise<Models.DocumentList<Models.Document>>
+  // So to handle promise you have two ways: 
+  // 1. .catch() , .then()
+  // 2. async await 
+// both are good method but use async await mostly 
+
+// Btw resolved(to resolve you  have to use async await/try catch) promise wil give two things: https://appwrite.io/docs/references/cloud/models/documentList 
+// 1. total(number of docs) and docments(list of docs) in array form 
+// Btw appwrite doesnt' send total by defaut so you have to response.total
+// and by default it sends response 
+
+  export const getProperties = async() => {
+    try {
       const response = await databases.listDocuments(
         config.databaseId!,
         config.propertiesCollectionId!,
-        buildQuery
       )
 
-      console.log("response from appwrite.ts",response);
-      return response.documents;
-      
+    
+      // if you want to use the value from an asynchronous function like 
+      // getProperties, you need to return the result. This is how promises work 
+      // in test.tsx
+    return response.documents
+    
     } catch (error) {
       console.log(error);
-      // means we can't fetch anything
-      return[]
-      
-      
+      throw new Error(error.message)
     }
   }
+
+  export const yo = () => {
+   // if you want to use the varaible value that is defined inside function then
+      // then you have to return it but why ?
+      // cause it's defined under this function scope 
+      // so if you want to use varialbe outside of scope then you have only one method
+      // 1. Return it: so whenever function executes return statement will also get 
+      const response = " YO dude"
+        return response
+    
+  }
+
+  
+    
