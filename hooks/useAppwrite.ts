@@ -68,5 +68,7 @@ useEffect(() => {
 
   const refetch = async (newParams: P) => await fetchData(newParams);
 
+  // data , loading error are just varialbes and function so to use them 
+  // return it 
   return { data, loading, error, refetch };
 };

@@ -1,20 +1,16 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { getProperties, yo } from '~/appwrite/appwrite'
+import { testing, yo } from '~/appwrite/appwrite'
 import { useEffect } from 'react'
 
 const Test = () => {
- useEffect(()=> {
-  console.log("after mounted");
-  
- },[])
- console.log("Rendered");
+
  useEffect(()=> {
  console.log("YO :",yo());
  },[])
   // to get props you can do this 
-  // console.log("Proprties from test.tsx no async await :", getProperties());
+  // console.log("Proprties from test.tsx no async await :", testing());
   // wait a min when I've resolved promise in appwrite.ts then why again ?
   // basically dude it's gives promise so you have to resolve it to use 
   // whether in test.tsx , component.tsx , mobile.tsx
@@ -23,7 +19,7 @@ const Test = () => {
   // so , have to reseolve like this 
   // but showing undefined
   // const fetchProps = async() => {
-  //   const result = await getProperties()
+  //   const result = await testing()
   //   console.log("From test.tsx no useEffect" ,result);
   // }
   // fetchProps()
@@ -34,7 +30,7 @@ const Test = () => {
   useEffect(() => {
   // so , have to reseolve like this 
   const fetchProps2 = async() => {
-    const result = await getProperties()
+    const result = await testing()
     // console.log("From test.tsx with useEffect" ,result);
   }
   fetchProps2()

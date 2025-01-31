@@ -237,7 +237,7 @@ type getPropertiesTypes = {
 // Btw appwrite doesnt' send total by defaut so you have to response.total
 // and by default it sends response 
 
-  export const getProperties = async() => {
+  export const testing = async() => {
     try {
       const response = await databases.listDocuments(
         config.databaseId!,
