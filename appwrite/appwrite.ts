@@ -257,13 +257,18 @@ type getPropertiesTypes = {
   }
 
   export const yo = () => {
-   // if you want to use the varaible value that is defined inside function then
-      // then you have to return it but why ?
+        // If a variable is inside a function, you cannot directly access it 
+        // from outside the function unless you return it but why ?
       // cause it's defined under this function scope 
       // so if you want to use varialbe outside of scope then you have only one method
       // 1. Return it: so whenever function executes return statement will also get 
+
+      // by default function returns undefined
+      // return some statement kills the function
       const response = " YO dude"
         return response
+        // also one more thing: basically function call always have return value yo() = response 
+        // so , you can store it by: const h = yo()
     
   }
 
