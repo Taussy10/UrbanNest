@@ -49,6 +49,9 @@ const { data: properties, refetch, loading,} = useAppwrite({
   skip: true,
 });
 
+console.log("properties :" , properties);
+
+
 useEffect(() => {
   refetch({
     filter: params.filter!,

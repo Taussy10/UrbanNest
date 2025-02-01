@@ -13,9 +13,9 @@ import { Models } from 'react-native-appwrite';
 
 
 const Details = () => {
-  const params = useLocalSearchParams()
+  const item = useLocalSearchParams()
 
-  console.log("Params from id.tsx :", params);
+  console.log("Params from id.tsx :", item);
   
   return (
     <SafeAreaView className=" flex-1 bg-white">
@@ -26,7 +26,7 @@ const Details = () => {
         className=' mb-6'
         >
         <ImageBackground
-        source={images.newYork} className=" h-[375px] w-full"
+        source= {{uri: item?.image}} className=" h-[375px] w-full"
         >
       {/* Write app bar code */}
         </ImageBackground>

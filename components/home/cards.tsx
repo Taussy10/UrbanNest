@@ -119,7 +119,7 @@ export const PropertyCard = ({onPress , item }:props) => {
     <TouchableOpacity 
     activeOpacity={0.7}
     onPress={onPress}
-    className=' bg-white rounded-xl  shadow-2xl   shadow-[#04060F0D]'>
+    className=' bg-white rounded-xl  shadow-2xl  mb-4  shadow-[#04060F0D]'>
      <ImageBackground  source={{uri: item?.image}}
      resizeMode= 'cover'
      className=' size-40 rounded-2xl  mb-2'
