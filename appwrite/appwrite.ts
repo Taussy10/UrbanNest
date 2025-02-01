@@ -152,7 +152,6 @@ export const getLatestProperties = async() => {
         [Query.orderAsc("$createdAt"), Query.limit(4)]
       )
 
-      console.log("response from getLatestProperties appwrite.ts :",response);
       return response.documents;
 
     } catch (error) {
@@ -172,53 +171,53 @@ type getPropertiesTypes = {
 }
 
 
-// For featured properties
-//   export const getProperties = async({filter, query ,limit}:getPropertiesTypes) => {
+// For filtering searching etc 
+  export const getProperties = async({filter, query ,limit}:getPropertiesTypes) => {
 
-//     try {
-//       // build query variable stores 
-//  const buildQuery = [Query.orderDesc("$createdAt")]
+    try {
+      // build query variable stores 
+ const buildQuery = [Query.orderDesc("$createdAt")]
 
-// if (filter && filter !== "All") {
-//   buildQuery.push(Query.equal('type', filter))
+if (filter && filter !== "All") {
+  buildQuery.push(Query.equal('type', filter))
   
-// }
+}
 
-// if (query) {
+if (query) {
 
-//   buildQuery.push(
-//     Query.or(
-//       [
-//         Query.search('name', query),
-//         Query.search('address', query),
-//         Query.search('type', query)
-//       ]
-//     )
-//   )
-// }
+  buildQuery.push(
+    Query.or(
+      [
+        Query.search('name', query),
+        Query.search('address', query),
+        Query.search('type', query)
+      ]
+    )
+  )
+}
 
-// if (limit) {
+if (limit) {
 
-//   buildQuery.push(Query.limit(limit))
-// }
+  buildQuery.push(Query.limit(limit))
+}
 
-//       const response = await databases.listDocuments(
-//         config.databaseId!,
-//         config.propertiesCollectionId!,
-//         buildQuery
-//       )
+      const response = await databases.listDocuments(
+        config.databaseId!,
+        config.propertiesCollectionId!,
+        buildQuery
+      )
 
-//       console.log("response from appwrite.ts",response);
-//       return response.documents;
+      console.log("response from appwrite.ts",response);
+      return response.documents;
       
-//     } catch (error) {
-//       console.log(error);
-//       // means we can't fetch anything
-//       return[]
+    } catch (error) {
+      console.log(error);
+      // means we can't fetch anything
+      return[]
       
       
-//     }
-//   }
+    }
+  }
 
   // getDocument(databaseId: string, collectionId: string, documentId: string, queries?: string[]): Promise<Models.Document>
 

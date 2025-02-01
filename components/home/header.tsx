@@ -5,9 +5,10 @@ import images from '~/constants/images';
 import { useAuthContext } from '~/context/auth-context';
 
 const Header = () => {
+
   const { user} = useAuthContext()
 
-  console.log("User :", user);
+  // console.log("User from header.tsx :", user);
   
   return (
 

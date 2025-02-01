@@ -9,75 +9,55 @@ import {
   ImageBackground,
   FlatList,
   TouchableOpacity,
+  ActivityIndicator,
 } from 'react-native';
-import {useEffect} from 'react';
+import {useEffect ,useState , useCallback} from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '~/components/home/header';
 import Search from '~/components/home/search';
-import Featured from '~/components/home/featured';
-import Recom from '~/components/home/recom';
 import { getCurrentUser,getProperties,  getLatestProperties, Logout, config } from '~/appwrite/appwrite';
-import { useContext } from 'react';
 import { AuthContext } from '~/context/auth-context';
 import { FeaturedCard, PropertyCard } from '~/components/home/cards';
-import images from '~/constants/images';
-import icons from '~/constants/icons';
 import Filters from '~/components/home/filters';
 import { Link, router, useLocalSearchParams, useRouter } from 'expo-router';
 import { useAppwrite } from '~/hooks/useAppwrite';
-import { useState } from 'react';
+import NoResults from '~/components/home/no-results';
 
 const Home = () => {
   const router = useRouter()
-  const params = useLocalSearchParams<{query?: string , filter?: string, }>()
+  const params = useLocalSearchParams<{ query?: string; filter?: string }>();
   const [recommendProps, setRecommendProps] = useState([])
 
-  useEffect(() => {
-    const fetchLatestProperties = async() => {
-      try {
-       const result = await getLatestProperties()
-       setRecommendProps(result)
-        console.log("Recommended Properties :",result);
-        
-      } catch (error) {
-       console.log(error);
-      }
-       }
-       fetchLatestProperties()
-
-  }, [])
+ 
+  console.log("params :",params);
   
+  // For featured properites
+  const { data: latestProperties, loading: latestPropertiesLoading } =
+    useAppwrite({
+      fn: getLatestProperties,
+    });
 
-console.log( "prams" ,params);
+console.log("featured Props :",latestProperties);
 
+const { data: properties, refetch, loading,} = useAppwrite({
+  fn: getProperties,
+  params: {
+    filter: params.filter!,
+    query: params.query!,
+    limit: 6,
+  },
+  skip: true,
+});
 
+useEffect(() => {
+  refetch({
+    filter: params.filter!,
+    query: params.query!,
+    limit: 6,
+  });
+}, [params.filter, params.query]);
 
-  // const { data: latestProperties, loading: latestPropertiesLoading } =
-  // useAppwrite({
-  //    getLatestProperties,
-  // });  
-
-  // // properties is alias of data
-  // const {data: properties,refetch,loading,} = useAppwrite({
-  //   getProperties,
-  //   params: {
-  //     filter: params.filter!,
-  //     query: params.query!,
-  //     limit: 6,
-  //   },
-  //   skip: true,
-  // });
-
-  // useEffect(() => {
-    
-  //   refetch({
-  //     filter: params.filter!,
-  //     query: params.query!,
-  //     limit: 6,
-  //   })
-  // }, [params.filter , params.query])
-  
-
+const handleCardPress = (id: string) => router.push(`/properties/${id}`);
 
   const moveDetails = () => {
     router.push("/details")
@@ -89,12 +69,12 @@ console.log( "prams" ,params);
 
       <FlatList
         // number of times we want to render items
-        data={recommendProps}
-        // data={[1]}
+        // data={recommendProps}
+        data={latestProperties}
         contentContainerClassName="pb-32 "
         // columnWrapperClassName="flex gap-5 px-5"
         showsVerticalScrollIndicator={false}
-        keyExtractor={(index) => index.toString()}
+        // keyExtractor={(index) => index.toString()}
         ListHeaderComponent={
           <View>
             <Header />
@@ -122,7 +102,10 @@ console.log( "prams" ,params);
         
               data={[1,2]}
              keyExtractor={(index) => index.toString() }
-              renderItem={() => <FeaturedCard  onPress={moveDetails} />}
+              renderItem={() =>
+                //  <FeaturedCard  onPress={moveDetails} />
+                 null
+                }
             />
 
 {/* Recommendation Header */}
@@ -135,19 +118,21 @@ console.log( "prams" ,params);
             {/* Ok , I don't have problem with header */}
           </View>
         }
+
+        ListEmptyComponent={
+          loading ? (
+            <ActivityIndicator  size={"large"} className=' text-primary-300  mt-5'  />
+              ):(
+      <NoResults />
+          )
+        }
         numColumns={2}
         // for giving gap between column
         columnWrapperClassName= 'gap-4 px-2'
         renderItem={({ item }) =>{
           return(
             <View>
-              <Link
-            href={{
-              pathname: "/properties/[id]",
-              params: {data:item}
-            }}>
-              <PropertyCard />
-              </Link>
+              <PropertyCard onPress={() => handleCardPress(item.$id)} item={item} />
             </View>
            
           )

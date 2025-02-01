@@ -2,6 +2,7 @@ import { View, Text, Image, ImageBackground, StyleSheet, TouchableOpacity, Image
 import React from 'react';
 import images from '~/constants/images';
 import icons from '~/constants/icons';
+import { Models } from 'react-native-appwrite';
 
 type FeaturedCardProps = {
   onPress: () => void,
@@ -105,17 +106,28 @@ const nativewind = {
   text: 'text-white',
 };
 
+type props = {
+  onPress: () => void
+  item: Models.Document;
 
-export const PropertyCard = () => {
+}
+
+export const PropertyCard = ({onPress , item }:props) => {
+  console.log("item from id.tsx :", item);
+
   return (
-    <View className=' bg-white rounded-xl  shadow-2xl   shadow-[#04060F0D]'>
-     <ImageBackground  source={images.japan}
-     className=' size-44 rounded-2xl  mb-2'
+    <TouchableOpacity 
+    activeOpacity={0.7}
+    onPress={onPress}
+    className=' bg-white rounded-xl  shadow-2xl   shadow-[#04060F0D]'>
+     <ImageBackground  source={{uri: item?.image}}
+     resizeMode= 'cover'
+     className=' size-40 rounded-2xl  mb-2'
      >
       {/* container for star */}
          <View style={styles.starContainer}>
          <Image source={icons.star} resizeMode="contain" className="size-4 " />
-      <Text className="  font-bold text-blue-500">4.8</Text>
+      <Text className="  font-bold text-blue-500">{item?.rating}</Text>
        </View>
       </ImageBackground>
 
@@ -123,17 +135,16 @@ export const PropertyCard = () => {
 
 <View className=' p-2'>
            <View className=" mb-3    gap-1">
-         <Text className={` font-rubik-bold  text-base text-black `}>La Grand Masion</Text>
+         <Text className={` font-rubik-bold  text-base text-black `}>{item?.name}</Text>
 
-       <Text className={` text-gray-400 `}>Tokyo ,Japan</Text>
+       <Text className={` text-gray-400 `}>{item?.address}</Text>
      </View>
-
        <View className=" flex-row  items-center justify-between ">
-         <Text className="font-bold text-blue-500">$12219</Text>
+         <Text className="font-bold text-blue-500">${item?.price}</Text>
          <Image source={icons.heart} resizeMode="contain" className="  h-7 w-7 " />
        </View> 
        </View>
-    </View>
+    </TouchableOpacity>
   )
 }
 

@@ -4,11 +4,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import images from '~/constants/images';
 import icons from '~/constants/icons';
 import FacilitiesIcons from '~/components/details/facilities-icons';
-
 // I haven't built appbar cause need to learn about that after
 // that will build it
 
 const Details = () => {
+  
   return (
     <SafeAreaView className=" flex-1 bg-white">
       <ScrollView>

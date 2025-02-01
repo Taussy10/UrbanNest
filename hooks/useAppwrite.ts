@@ -23,16 +23,20 @@ interface UseAppwriteReturn<T, P> {
 export const useAppwrite = <T, P extends Record<string, string | number>>({
     // accepting three params 
     // function , params as an object and skip variable maybe
+  // fn as param for getting data 
   fn,
   params = {} as P,
   skip = false,
 }: UseAppwriteOptions<T, P>): UseAppwriteReturn<T, P> => {
+  // data for storing data 
   const [data, setData] = useState<T | null>(null);
+  // loading for checking whether data came or not ?
   const [loading, setLoading] = useState(!skip);
   const [error, setError] = useState<string | null>(null);
 
   // useCallback: to prevent unncessary re-renders
   const fetchData = useCallback(
+    // usecallback is taking a function
     async (fetchParams: P) => {
       // accepts params as fetchParams
       setLoading(true);
