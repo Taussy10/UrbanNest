@@ -60,6 +60,7 @@ useEffect(() => {
   });
 }, [params.filter, params.query]);
 
+// pushing the rotuer sending param as id
 const handleCardPress = (id: string) => router.push(`/properties/${id}`);
 
   const moveDetails = () => {
@@ -72,21 +73,20 @@ const handleCardPress = (id: string) => router.push(`/properties/${id}`);
 
       <FlatList
         // number of times we want to render items
-        // data={recommendProps}
-        data={latestProperties}
+        // data={[]}
+        data={properties}
         contentContainerClassName="pb-32 "
         // columnWrapperClassName="flex gap-5 px-5"
         showsVerticalScrollIndicator={false}
-        // keyExtractor={(index) => index.toString()}
+        keyExtractor={(item) => item.$id}
+
         ListHeaderComponent={
           <View>
             <Header />
             <Search />
             {/* just for temporor */}
-            <Button title='Move' onPress={() => router.push("/details")} />
           
        
-            {/* <Link href="/test?id=123&name=John">Go to Profile</Link> */}
 
 
             {/* Featured Header */}
@@ -96,20 +96,28 @@ const handleCardPress = (id: string) => router.push(`/properties/${id}`);
             </View>
 
 {/* Featured Cards */}
-            <FlatList
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              
-              // add gap between elements
-              contentContainerClassName="flex gap-5  "
-        
-              data={[1,2]}
-             keyExtractor={(index) => index.toString() }
-              renderItem={() =>
-                //  <FeaturedCard  onPress={moveDetails} />
-                 null
-                }
-            />
+{
+  latestPropertiesLoading ?(
+    <ActivityIndicator size={"large"} className=' text-base' />
+  ): !latestProperties || latestProperties.length === 0 ?  (
+<NoResults />
+  ):(
+    <FlatList
+    horizontal
+    showsHorizontalScrollIndicator={false}
+    
+    // add gap between elements
+    contentContainerClassName="flex gap-5  "
+
+    data={latestProperties}
+    keyExtractor={(item) => item.$id}
+    renderItem={({item}) =>
+       <FeaturedCard onPress={() => handleCardPress(item.$id)} item={item}  />
+      }
+  />
+  )
+}
+           
 
 {/* Recommendation Header */}
             <View className=" mb-3 flex-row items-center  justify-between">
@@ -135,6 +143,7 @@ const handleCardPress = (id: string) => router.push(`/properties/${id}`);
         renderItem={({ item }) =>{
           return(
             <View>
+              {/* that param handleCardPress id = item.id */}
               <PropertyCard onPress={() => handleCardPress(item.$id)} item={item} />
             </View>
            

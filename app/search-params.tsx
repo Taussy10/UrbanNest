@@ -2,7 +2,9 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { useLocalSearchParams } from 'expo-router'
 
-{/*  Pass params from previous screen:  
+
+{/*  Pass params from previous screen 
+ and [id] is a dynamic file :  
 //  <Link
 //             href={{
 //               pathname: "/properties/[id]",

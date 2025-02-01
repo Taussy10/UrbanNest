@@ -171,7 +171,7 @@ type getPropertiesTypes = {
 }
 
 
-// For filtering searching etc 
+// For getting all props & filtering searching etc 
   export const getProperties = async({filter, query ,limit}:getPropertiesTypes) => {
 
     try {
