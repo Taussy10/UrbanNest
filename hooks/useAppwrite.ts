@@ -17,11 +17,6 @@ interface UseAppwriteReturn<T, P> {
 
 
 
-// const useAppwrite: ({ fn, params, skip, }) => something
-const hello = (a:string) => {
-    console.log(a);
-}
-hello("Good morning")
 
 // so this above function is like above one
 

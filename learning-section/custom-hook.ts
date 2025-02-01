@@ -4,6 +4,7 @@ import { testing } from "~/appwrite/appwrite"
 
 
 // so, this is basic setup: everything will work fine just execute the function 
+// console.log("custom :",useCustomHook());
 export const useBasic = () =>{
       // 1. get the data
       useEffect(() => {
