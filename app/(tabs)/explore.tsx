@@ -57,7 +57,7 @@ useEffect(() => {
   refetch({
     filter: params.filter!,
     query: params.query!,
-    limit: 6,
+    limit: 20,
   });
 }, [params.filter, params.query]);
 
@@ -97,7 +97,7 @@ const handleCardPress = (id: string) => router.push(`/properties/${id}`);
             </View>
             <Search />
             <Filters />
-            <Text className=' my-5 text-2xl text-black-300  font-bold'> Found {properties?.length} Apartments</Text>
+            <Text className=' my-5 text-2xl text-black-300  font-bold text-center'> Found {properties?.length} Apartments</Text>
           </View>
         }
 

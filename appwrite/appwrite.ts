@@ -219,8 +219,27 @@ if (limit) {
     }
   }
 
-  // getDocument(databaseId: string, collectionId: string, documentId: string, queries?: string[]): Promise<Models.Document>
 
+  // Databases.getDocument(databaseId,collectionId, documentId, queries?): 
+  // Promise
+  //   // For getting unique document
+export const getPropertyDetails = async({id}:{id:string}) => {
+  try {
+    const response = await databases.getDocument(
+    config.databaseId!,
+    config.propertiesCollectionId!,
+    id,
+    )
+
+    return response
+  } catch (error) {
+    console.log("Error from appwrite.ts" ,error);
+    throw new Error(error.message)
+  }
+}
+
+
+  
 
   // How will I know that I need to use async await ?
   // Hover on databases.listDocuments and know what it returns:
