@@ -78,7 +78,8 @@ console.log("Property details :", property);
     </View>
 
     {/* bed , bath 2000sqft container */}
-    <View className=" flex-row items-center justify-between ">
+    <View className=" flex-row items-center  gap-5">
+
       {/* for bed */}
       <View className=" w-24  flex-row  items-center gap-3 ">
         {/* for bed's rouneded color */}
@@ -86,7 +87,22 @@ console.log("Property details :", property);
           <Image source={icons.bed} className="  size-4 " />
         </View>
 
-        <Text>8 Beds</Text>
+        <Text>{property?.bedrooms} beds</Text>
+      </View>
+      <View className=" w-24  flex-row  items-center gap-3 ">
+        {/* for bed's rouneded color */}
+        <View className="  rounded-full  bg-primary-200 p-2 ">
+          <Image source={icons.bath} className="  size-4 " />
+        </View>
+
+        <Text>{property?.bedrooms} bath</Text>
+      </View>
+      <View className=" w-24  flex-row  items-center gap-3 ">
+        {/* for bed's rouneded color */}
+        <View className="  rounded-full  bg-primary-200 p-2 ">
+          <Image source={icons.area} className="  size-4 " />
+        </View>
+        <Text>8 {property?.area} sqft</Text>
       </View>
 
       {/* bed , bath 2000sqft */}

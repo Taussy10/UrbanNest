@@ -30,15 +30,6 @@ const RootLayout = () => {
     return null;
   }
 
-  // const {user , loggedIn} = useGlobalContext()
-  // console.log(user ,loggedIn);
-
-  // if (user !==null && loggedIn) {
-  //   // it's a component so we have to put either inside jsx or
-  //   // return it
-  //  return <Redirect href={"/home"} />
-
-  // }
   return (
     <AuthProvider>
       <Stack screenOptions={{ headerShown: false }}>
