@@ -7,6 +7,7 @@ import FacilitiesIcons from '~/components/details/facilities-icons';
 import { useLocalSearchParams } from 'expo-router';
 import { useAppwrite } from '~/hooks/useAppwrite';
 import {  getPropertyDetails } from '~/appwrite/appwrite';
+import { facilities } from '~/constants/data';
 // I haven't built appbar cause need to learn about that after
 // that will build it
 
@@ -28,8 +29,7 @@ const Details = () => {
 
 console.log("Property details :", property);
 
-// console.log("Details from id.tsx :",details);
-  console.log("Params from id.tsx :", id);
+
   
   return (
     <SafeAreaView className=" flex-1 bg-white">
@@ -165,20 +165,40 @@ flow row and we don't want that that's why wraped
   <View className=" mb-4  ">
     <Text className=' text-2xl mb-3  font-bold' >Facilities</Text>
 
-    {/* this method isn't great for aligining will look for diff methods */}
-    <View className=" flex-row mb-3">
-      <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
-      <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
-      <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
-      <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
-    </View>
+{/* For Facilities: and they are in array so gonna use array(map) method 
 
-    <View className="  flex-row">
-      <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
-      <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
-      <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
-      <FacilitiesIcons name="Car Parking" icon={icons.carPark} />
+   <View
+ className=' justify-center items-center  bg-primary-200 size-14  rounded-full p-2 mb-1 '>
+ <Image  
+  source={icons.carPark} 
+  className='  size-8 rounded-full' /> 
+</View> 
+ */} 
+
+
+
+
+<FlatList 
+data={property?.facilities}
+numColumns={4}
+renderItem={({item}) => {
+  console.log("Facilites name from id.tsx" ,item);
+  
+  return(
+    <View className=' flex-col items-center justify-center mr-6  mb-6'>
+   <View className=' justify-center items-center  bg-primary-200   size-16  rounded-full  p-4 mb-1 '>
+ <Image  
+  source={icons.carPark} 
+  className='  size-8 rounded-full' /> 
     </View>
+    <Text 
+    numberOfLines={1} className=' text-center font-rubik'>{item?.slice(0,8)}...</Text>
+    </View>
+  )
+
+}}
+/>
+
 
  </View>
 
@@ -269,14 +289,13 @@ flow row and we don't want that that's why wraped
      </ScrollView>
 
       
-<FlatList 
+{/* <FlatList 
       // Actually the data you are getting in object that's why converted into array
       // also if no data then show [] empty array otherwise cause if not this then it will give error
 
-  data={[property||[]]}
+  data={property||[]}
 keyExtractor={(item) => item?.$id }
 renderItem={({item}) => {
-  console.log("Item",item?.agent?.avatar);
   
   return (
     // For flatlist screen
@@ -287,7 +306,7 @@ renderItem={({item}) => {
             </View>
   )
 }}
-/>
+/> */}
 
        
     </SafeAreaView>

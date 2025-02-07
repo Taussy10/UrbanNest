@@ -11,15 +11,14 @@ import {
   TouchableOpacity,
   ActivityIndicator,
 } from 'react-native';
-import {useEffect ,useState , useCallback} from 'react';
+import {useEffect ,useState , useCallback} from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '~/components/home/header';
 import Search from '~/components/home/search';
-import { getCurrentUser,getProperties,  getLatestProperties, Logout, config } from '~/appwrite/appwrite';
-import { AuthContext } from '~/context/auth-context';
+import { getProperties,  getLatestProperties, } from '~/appwrite/appwrite';
 import { FeaturedCard, PropertyCard } from '~/components/home/cards';
 import Filters from '~/components/home/filters';
-import { Link, router, useLocalSearchParams, useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useAppwrite } from '~/hooks/useAppwrite';
 import NoResults from '~/components/home/no-results';
 
