@@ -1,4 +1,4 @@
- latestProps : [
+ (NOBRIDGE) LOG  featured Props : [
     {
         "$collectionId": "6798be370000a1ba7c95",
         "$createdAt": "2025-01-28T16:06:20.796+00:00",
@@ -9,19 +9,9 @@
             "update(\"user:67947301501e134601b7\")",
             "delete(\"user:67947301501e134601b7\")"
         ],
-        "$updatedAt": "2025-01-28T16:06:20.796+00:00",
+        "$updatedAt": "2025-02-04T13:52:06.375+00:00",
         "address": "123 Property Street, City 1",
-        "agent": {
-            "$collectionId": "6798bb850018243b4326",
-            "$createdAt": "2025-01-28T16:05:57.012+00:00",
-            "$databaseId": "6798bb3a002bafd474de",
-            "$id": "6799006300053205936a",
-            "$permissions": [],
-            "$updatedAt": "2025-01-28T16:05:57.012+00:00",
-            "avatar": "https://images.unsplash.com/photo-1542507464418-09c375b86bbe?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "email": "agent5@example.com",
-            "name": "Agent 5"
-        },
+        "agent": null,
         "area": 2374,
         "bathrooms": 1,
         "bedrooms": 5,
@@ -41,7 +31,7 @@
         "name": "Property 1",
         "price": 5063,
         "rating": 4,
-        "reviews": [],
+        "reviews": null,
         "type": "Townhouses"
     },
     {
@@ -56,17 +46,7 @@
         ],
         "$updatedAt": "2025-01-28T16:06:23.911+00:00",
         "address": "123 Property Street, City 2",
-        "agent": {
-            "$collectionId": "6798bb850018243b4326",
-            "$createdAt": "2025-01-28T16:05:56.120+00:00",
-            "$databaseId": "6798bb3a002bafd474de",
-            "$id": "6799006200109d223354",
-            "$permissions": [],
-            "$updatedAt": "2025-01-28T16:05:56.120+00:00",
-            "avatar": "https://images.unsplash.com/photo-1691335053879-02096d6ee2ca?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "email": "agent4@example.com",
-            "name": "Agent 4"
-        },
+        "agent": null,
         "area": 744,
         "bathrooms": 4,
         "bedrooms": 4,
@@ -85,7 +65,7 @@
         "name": "Property 2",
         "price": 2209,
         "rating": 1,
-        "reviews": [],
+        "reviews": null,
         "type": "Duplexes"
     },
     {
@@ -100,17 +80,7 @@
         ],
         "$updatedAt": "2025-01-28T16:06:27.720+00:00",
         "address": "123 Property Street, City 3",
-        "agent": {
-            "$collectionId": "6798bb850018243b4326",
-            "$createdAt": "2025-01-28T16:05:55.451+00:00",
-            "$databaseId": "6798bb3a002bafd474de",
-            "$id": "67990061002273b98844",
-            "$permissions": [],
-            "$updatedAt": "2025-01-28T16:05:55.451+00:00",
-            "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "email": "agent3@example.com",
-            "name": "Agent 3"
-        },
+        "agent": null,
         "area": 3411,
         "bathrooms": 2,
         "bedrooms": 5,
@@ -124,7 +94,7 @@
         "name": "Property 3",
         "price": 6150,
         "rating": 2,
-        "reviews": [],
+        "reviews": null,
         "type": "Townhouses"
     },
     {
@@ -139,17 +109,7 @@
         ],
         "$updatedAt": "2025-01-28T16:06:31.191+00:00",
         "address": "123 Property Street, City 4",
-        "agent": {
-            "$collectionId": "6798bb850018243b4326",
-            "$createdAt": "2025-01-28T16:05:57.012+00:00",
-            "$databaseId": "6798bb3a002bafd474de",
-            "$id": "6799006300053205936a",
-            "$permissions": [],
-            "$updatedAt": "2025-01-28T16:05:57.012+00:00",
-            "avatar": "https://images.unsplash.com/photo-1542507464418-09c375b86bbe?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "email": "agent5@example.com",
-            "name": "Agent 5"
-        },
+        "agent": null,
         "area": 2005,
         "bathrooms": 4,
         "bedrooms": 2,
@@ -167,61 +127,12 @@
         "name": "Property 4",
         "price": 1025,
         "rating": 1,
-        "reviews": [],
+        "reviews": null,
         "type": "Duplexes"
     }
 ]
 
-item in detals screen: {
-    "$collectionId": "6798be370000a1ba7c95",
-    "$createdAt": "2025-01-28T16:06:31.191+00:00",
-    "$databaseId": "6798bb3a002bafd474de",
-    "$id": "6799008500130f624da4",
-    "$permissions": [
-        "read(\"user:67947301501e134601b7\")",
-        "update(\"user:67947301501e134601b7\")",
-        "delete(\"user:67947301501e134601b7\")"
-    ],
-    "$updatedAt": "2025-01-28T16:06:31.191+00:00",
-    "address": "123 Property Street, City 4",
-    "agent": {
-        "$collectionId": "6798bb850018243b4326",
-        "$createdAt": "2025-01-28T16:05:57.012+00:00",
-        "$databaseId": "6798bb3a002bafd474de",
-        "$id": "6799006300053205936a",
-        "$permissions": [
-            "read(\"user:67947301501e134601b7\")",
-            "update(\"user:67947301501e134601b7\")",
-            "delete(\"user:67947301501e134601b7\")"
-        ],
-        "$updatedAt": "2025-01-28T16:05:57.012+00:00",
-        "avatar": "https://images.unsplash.com/photo-1542507464418-09c375b86bbe?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "email": "agent5@example.com",
-        "name": "Agent 5"
-    },
-    "area": 2005,
-    "bathrooms": 4,
-    "bedrooms": 2,
-    "description": "This is the description for Property 4.",
-    "facilities": [
-        "Wifi",
-        "Pet Center",
-        "Swimming pool",
-        "Cutlery",
-        "Gym"
-    ],
-    "gallery": [],
-    "geolocation": "192.168.1.4, 192.168.1.4",
-    "image": "https://images.unsplash.com/photo-1561753757-d8880c5a3551?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "name": "Property 4",
-    "price": 1025,
-    "rating": 1,
-    "reviews": [],
-    "type": "Duplexes"
-}
-
-
-properties : [
+ properties : [
     {
         "$collectionId": "6798be370000a1ba7c95",
         "$createdAt": "2025-01-28T16:07:36.718+00:00",
@@ -232,18 +143,19 @@ properties : [
             "update(\"user:67947301501e134601b7\")",
             "delete(\"user:67947301501e134601b7\")"
         ],
-        "$updatedAt": "2025-01-28T16:07:36.718+00:00",
+        "$updatedAt": "2025-02-08T05:42:49.767+00:00",
         "address": "123 Property Street, City 20",
         "agent": {
             "$collectionId": "6798bb850018243b4326",
-            "$createdAt": "2025-01-28T16:05:56.120+00:00",
+            "$createdAt": "2025-01-28T16:05:49.626+00:00",
             "$databaseId": "6798bb3a002bafd474de",
-            "$id": "6799006200109d223354",
-            "$permissions": [],
-            "$updatedAt": "2025-01-28T16:05:56.120+00:00",
-            "avatar": "https://images.unsplash.com/photo-1691335053879-02096d6ee2ca?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "email": "agent4@example.com",
-            "name": "Agent 4"
+            "$id": "6799005b00307d0afb12",
+            "$permissions": [Array
+            ],
+            "$updatedAt": "2025-01-28T16:05:49.626+00:00",
+            "avatar": "https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "email": "agent1@example.com",
+            "name": "Agent 1"
         },
         "area": 2403,
         "bathrooms": 4,
@@ -256,29 +168,26 @@ properties : [
             "Swimming pool"
         ],
         "gallery": [
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            []
+            [Object]
         ],
         "geolocation": "192.168.1.20, 192.168.1.20",
         "image": "https://images.unsplash.com/photo-1600585153490-76fb20a32601?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "name": "Property 20",
         "price": 5780,
         "rating": 3,
-        "reviews": [
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            []
-        ],
+        "reviews": {
+            "$collectionId": "6798bd0b001e21f56ced",
+            "$createdAt": "2025-01-28T16:06:00.537+00:00",
+            "$databaseId": "6798bb3a002bafd474de",
+            "$id": "67990066002a8734b442",
+            "$permissions": [Array
+            ],
+            "$updatedAt": "2025-02-04T13:52:06.509+00:00",
+            "avatar": "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "name": "Reviewer 3",
+            "rating": 1,
+            "review": "This is a review by Reviewer 3."
+        },
         "type": "Houses"
     },
     {
@@ -293,17 +202,7 @@ properties : [
         ],
         "$updatedAt": "2025-01-28T16:07:33.219+00:00",
         "address": "123 Property Street, City 19",
-        "agent": {
-            "$collectionId": "6798bb850018243b4326",
-            "$createdAt": "2025-01-28T16:05:57.012+00:00",
-            "$databaseId": "6798bb3a002bafd474de",
-            "$id": "6799006300053205936a",
-            "$permissions": [],
-            "$updatedAt": "2025-01-28T16:05:57.012+00:00",
-            "avatar": "https://images.unsplash.com/photo-1542507464418-09c375b86bbe?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "email": "agent5@example.com",
-            "name": "Agent 5"
-        },
+        "agent": null,
         "area": 1737,
         "bathrooms": 3,
         "bedrooms": 3,
@@ -312,19 +211,13 @@ properties : [
             "Gym",
             "Sports Center"
         ],
-        "gallery": [
-            [],
-            []
-        ],
+        "gallery": [],
         "geolocation": "192.168.1.19, 192.168.1.19",
         "image": "https://images.unsplash.com/photo-1720432972486-2d53db5badf0?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "name": "Property 19",
         "price": 2251,
         "rating": 2,
-        "reviews": [
-            [],
-            []
-        ],
+        "reviews": null,
         "type": "Studios"
     },
     {
@@ -339,17 +232,7 @@ properties : [
         ],
         "$updatedAt": "2025-01-28T16:07:29.635+00:00",
         "address": "123 Property Street, City 18",
-        "agent": {
-            "$collectionId": "6798bb850018243b4326",
-            "$createdAt": "2025-01-28T16:05:57.012+00:00",
-            "$databaseId": "6798bb3a002bafd474de",
-            "$id": "6799006300053205936a",
-            "$permissions": [],
-            "$updatedAt": "2025-01-28T16:05:57.012+00:00",
-            "avatar": "https://images.unsplash.com/photo-1542507464418-09c375b86bbe?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "email": "agent5@example.com",
-            "name": "Agent 5"
-        },
+        "agent": null,
         "area": 1758,
         "bathrooms": 5,
         "bedrooms": 5,
@@ -364,11 +247,7 @@ properties : [
         "name": "Property 18",
         "price": 8103,
         "rating": 5,
-        "reviews": [
-            [],
-            [],
-            []
-        ],
+        "reviews": null,
         "type": "Duplexes"
     },
     {
@@ -383,17 +262,7 @@ properties : [
         ],
         "$updatedAt": "2025-01-28T16:07:25.959+00:00",
         "address": "123 Property Street, City 17",
-        "agent": {
-            "$collectionId": "6798bb850018243b4326",
-            "$createdAt": "2025-01-28T16:05:53.286+00:00",
-            "$databaseId": "6798bb3a002bafd474de",
-            "$id": "6799005f00193ae07c4e",
-            "$permissions": [],
-            "$updatedAt": "2025-01-28T16:05:53.286+00:00",
-            "avatar": "https://images.unsplash.com/photo-1691335053879-02096d6ee2ca?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "email": "agent2@example.com",
-            "name": "Agent 2"
-        },
+        "agent": null,
         "area": 2377,
         "bathrooms": 4,
         "bedrooms": 5,
@@ -410,10 +279,7 @@ properties : [
         "name": "Property 17",
         "price": 1365,
         "rating": 3,
-        "reviews": [
-            [],
-            []
-        ],
+        "reviews": null,
         "type": "Villas"
     },
     {
@@ -428,17 +294,7 @@ properties : [
         ],
         "$updatedAt": "2025-01-28T16:07:22.808+00:00",
         "address": "123 Property Street, City 16",
-        "agent": {
-            "$collectionId": "6798bb850018243b4326",
-            "$createdAt": "2025-01-28T16:05:53.286+00:00",
-            "$databaseId": "6798bb3a002bafd474de",
-            "$id": "6799005f00193ae07c4e",
-            "$permissions": [],
-            "$updatedAt": "2025-01-28T16:05:53.286+00:00",
-            "avatar": "https://images.unsplash.com/photo-1691335053879-02096d6ee2ca?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "email": "agent2@example.com",
-            "name": "Agent 2"
-        },
+        "agent": null,
         "area": 2765,
         "bathrooms": 2,
         "bedrooms": 2,
@@ -457,9 +313,7 @@ properties : [
         "name": "Property 16",
         "price": 1286,
         "rating": 3,
-        "reviews": [
-            []
-        ],
+        "reviews": null,
         "type": "Others"
     },
     {
@@ -474,17 +328,7 @@ properties : [
         ],
         "$updatedAt": "2025-01-28T16:07:18.824+00:00",
         "address": "123 Property Street, City 15",
-        "agent": {
-            "$collectionId": "6798bb850018243b4326",
-            "$createdAt": "2025-01-28T16:05:57.012+00:00",
-            "$databaseId": "6798bb3a002bafd474de",
-            "$id": "6799006300053205936a",
-            "$permissions": [],
-            "$updatedAt": "2025-01-28T16:05:57.012+00:00",
-            "avatar": "https://images.unsplash.com/photo-1542507464418-09c375b86bbe?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "email": "agent5@example.com",
-            "name": "Agent 5"
-        },
+        "agent": null,
         "area": 2125,
         "bathrooms": 4,
         "bedrooms": 4,
@@ -501,63 +345,7 @@ properties : [
         "name": "Property 15",
         "price": 5376,
         "rating": 2,
-        "reviews": [
-            [],
-            []
-        ],
+        "reviews": null,
         "type": "Condos"
     }
 ]
-
-Details screen Data {
-    "$collectionId": "6798be370000a1ba7c95",
-    "$createdAt": "2025-01-28T16:06:20.796+00:00",
-    "$databaseId": "6798bb3a002bafd474de",
-    "$id": "6799007a0039508d569b",
-    "$permissions": [
-        "read(\"user:67947301501e134601b7\")",
-        "update(\"user:67947301501e134601b7\")",
-        "delete(\"user:67947301501e134601b7\")"
-    ],
-    "$updatedAt": "2025-01-28T16:06:20.796+00:00",
-    "address": "123 Property Street, City 1",
-    "agent": {
-        "$collectionId": "6798bb850018243b4326",
-        "$createdAt": "2025-01-28T16:05:57.012+00:00",
-        "$databaseId": "6798bb3a002bafd474de",
-        "$id": "6799006300053205936a",
-        "$permissions": [
-            "read(\"user:67947301501e134601b7\")",
-            "update(\"user:67947301501e134601b7\")",
-            "delete(\"user:67947301501e134601b7\")"
-        ],
-        "$updatedAt": "2025-01-28T16:05:57.012+00:00",
-        "avatar": "https://images.unsplash.com/photo-1542507464418-09c375b86bbe?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "email": "agent5@example.com",
-        "name": "Agent 5"
-    },
-    "area": 2374,
-    "bathrooms": 1,
-    "bedrooms": 5,
-    "description": "This is the description for Property 1.",
-    "facilities": [
-        "Swimming pool",
-        "Sports Center",
-        "Pet Center",
-        "Cutlery",
-        "Laundry",
-        "Wifi",
-        "Gym"
-    ],
-    "gallery": [],
-    "geolocation": "192.168.1.1, 192.168.1.1",
-    "image": "https://images.unsplash.com/photo-1605146768851-eda79da39897?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "name": "Property 1",
-    "price": 5063,
-    "rating": 4,
-    "reviews": [],
-    "type": "Townhouses"
-}
-
- [{"$collectionId": "6798be370000a1ba7c95", "$createdAt": "2025-01-28T16:07:36.718+00:00", "$databaseId": "6798bb3a002bafd474de", "$id": "679900c600348a206883", "$permissions": ["read(\"user:67947301501e134601b7\")", "update(\"user:67947301501e134601b7\")", "delete(\"user:67947301501e134601b7\")"], "$updatedAt": "2025-01-28T16:07:36.718+00:00", "address": "123 Property Street, City 20", "agent": {"$collectionId": "6798bb850018243b4326", "$createdAt": "2025-01-28T16:05:56.120+00:00", "$databaseId": "6798bb3a002bafd474de", "$id": "6799006200109d223354", "$permissions": [Array], "$updatedAt": "2025-01-28T16:05:56.120+00:00", "avatar": "https://images.unsplash.com/photo-1691335053879-02096d6ee2ca?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "email": "agent4@example.com", "name": "Agent 4"}, "area": 2403, "bathrooms": 4, "bedrooms": 5, "description": "This is the description for Property 20.", "facilities": ["Pet Center", "Sports Center", "Gym", "Swimming pool"], "gallery": [[Object], [Object], [Object], [Object]], "geolocation": "192.168.1.20, 192.168.1.20", "image": "https://images.unsplash.com/photo-1600585153490-76fb20a32601?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "name": "Property 20", "price": 5780, "rating": 3, "reviews": [[Object], [Object], [Object], [Object], [Object], [Object]], "type": "Houses"}, {"$collectionId": "6798be370000a1ba7c95", "$createdAt": "2025-01-28T16:07:33.219+00:00", "$databaseId": "6798bb3a002bafd474de", "$id": "679900c30015fc85a430", "$permissions": ["read(\"user:67947301501e134601b7\")", "update(\"user:67947301501e134601b7\")", "delete(\"user:67947301501e134601b7\")"], "$updatedAt": "2025-01-28T16:07:33.219+00:00", "address": "123 Property Street, City 19", "agent": {"$collectionId": "6798bb850018243b4326", "$createdAt": "2025-01-28T16:05:57.012+00:00", "$databaseId": "6798bb3a002bafd474de", "$id": "6799006300053205936a", "$permissions": [Array], "$updatedAt": "2025-01-28T16:05:57.012+00:00", "avatar": "https://images.unsplash.com/photo-1542507464418-09c375b86bbe?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "email": "agent5@example.com", "name": "Agent 5"}, "area": 1737, "bathrooms": 3, "bedrooms": 3, "description": "This is the description for Property 19.", "facilities": ["Gym", "Sports Center"], "gallery": [[Object], [Object]], "geolocation": "192.168.1.19, 192.168.1.19", "image": "https://images.unsplash.com/photo-1720432972486-2d53db5badf0?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "name": "Property 19", "price": 2251, "rating": 2, "reviews": [[Object], [Object]], "type": "Studios"}, {"$collectionId": "6798be370000a1ba7c95", "$createdAt": "2025-01-28T16:07:29.635+00:00", "$databaseId": "6798bb3a002bafd474de", "$id": "679900bf00303a93f1b0", "$permissions": ["read(\"user:67947301501e134601b7\")", "update(\"user:67947301501e134601b7\")", "delete(\"user:67947301501e134601b7\")"], "$updatedAt": "2025-01-28T16:07:29.635+00:00", "address": "123 Property Street, City 18", "agent": {"$collectionId": "6798bb850018243b4326", "$createdAt": "2025-01-28T16:05:57.012+00:00", "$databaseId": "6798bb3a002bafd474de", "$id": "6799006300053205936a", "$permissions": [Array], "$updatedAt": "2025-01-28T16:05:57.012+00:00", "avatar": "https://images.unsplash.com/photo-1542507464418-09c375b86bbe?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "email": "agent5@example.com", "name": "Agent 5"}, "area": 1758, "bathrooms": 5, "bedrooms": 5, "description": "This is the description for Property 18.", "facilities": ["Swimming pool", "Car Parking"], "gallery": [], "geolocation": "192.168.1.18, 192.168.1.18", "image": "https://images.unsplash.com/photo-1600585153490-76fb20a32601?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "name": "Property 18", "price": 8103, "rating": 5, "reviews": [[Object], [Object]], "type": "Duplexes"}, {"$collectionId": "6798be370000a1ba7c95", "$createdAt": "2025-01-28T16:07:25.959+00:00", "$databaseId": "6798bb3a002bafd474de", "$id": "679900bc0004d948594e", "$permissions": ["read(\"user:67947301501e134601b7\")", "update(\"user:67947301501e134601b7\")", "delete(\"user:67947301501e134601b7\")"], "$updatedAt": "2025-01-28T16:07:25.959+00:00", "address": "123 Property Street, City 17", "agent": {"$collectionId": "6798bb850018243b4326", "$createdAt": "2025-01-28T16:05:53.286+00:00", "$databaseId": "6798bb3a002bafd474de", "$id": "6799005f00193ae07c4e", "$permissions": [Array], "$updatedAt": "2025-01-28T16:05:53.286+00:00", "avatar": "https://images.unsplash.com/photo-1691335053879-02096d6ee2ca?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "email": "agent2@example.com", "name": "Agent 2"}, "area": 2377, "bathrooms": 4, "bedrooms": 5, "description": "This is the description for Property 17.", "facilities": ["Cutlery", "Wifi", "Gym", "Laundry"], "gallery": [], "geolocation": "192.168.1.17, 192.168.1.17", "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "name": "Property 17", "price": 1365, "rating": 3, "reviews": [[Object], [Object]], "type": "Villas"}, {"$collectionId": "6798be370000a1ba7c95", "$createdAt": "2025-01-28T16:07:22.808+00:00", "$databaseId": "6798bb3a002bafd474de", "$id": "679900b8003923788416", "$permissions": ["read(\"user:67947301501e134601b7\")", "update(\"user:67947301501e134601b7\")", "delete(\"user:67947301501e134601b7\")"], "$updatedAt": "2025-01-28T16:07:22.808+00:00", "address": "123 Property Street, City 16", "agent": {"$collectionId": "6798bb850018243b4326", "$createdAt": "2025-01-28T16:05:53.286+00:00", "$databaseId": "6798bb3a002bafd474de", "$id": "6799005f00193ae07c4e", "$permissions": [Array], "$updatedAt": "2025-01-28T16:05:53.286+00:00", "avatar": "https://images.unsplash.com/photo-1691335053879-02096d6ee2ca?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "email": "agent2@example.com", "name": "Agent 2"}, "area": 2765, "bathrooms": 2, "bedrooms": 2, "description": "This is the description for Property 16.", "facilities": ["Car Parking", "Wifi", "Sports Center", "Gym", "Swimming pool", "Pet Center"], "gallery": [], "geolocation": "192.168.1.16, 192.168.1.16", "image": "https://images.unsplash.com/photo-1719299225324-301bad5c333c?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "name": "Property 16", "price": 1286, "rating": 3, "reviews": [[Object]], "type": "Others"}, {"$collectionId": "6798be370000a1ba7c95", "$createdAt": "2025-01-28T16:07:18.824+00:00", "$databaseId": "6798bb3a002bafd474de", "$id": "679900b40039bc9d6d98", "$permissions": ["read(\"user:67947301501e134601b7\")", "update(\"user:67947301501e134601b7\")", "delete(\"user:67947301501e134601b7\")"], "$updatedAt": "2025-01-28T16:07:18.824+00:00", "address": "123 Property Street, City 15", "agent": {"$collectionId": "6798bb850018243b4326", "$createdAt": "2025-01-28T16:05:57.012+00:00", "$databaseId": "6798bb3a002bafd474de", "$id": "6799006300053205936a", "$permissions": [Array], "$updatedAt": "2025-01-28T16:05:57.012+00:00", "avatar": "https://images.unsplash.com/photo-1542507464418-09c375b86bbe?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "email": "agent5@example.com", "name": "Agent 5"}, "area": 2125, "bathrooms": 4, "bedrooms": 4, "description": "This is the description for Property 15.", "facilities": ["Sports Center", "Wifi", "Swimming pool", "Gym"], "gallery": [], "geolocation": "192.168.1.15, 192.168.1.15", "image": "https://images.unsplash.com/photo-1516095901529-0ef7be431a4f?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "name": "Property 15", "price": 5376, "rating": 2, "reviews": [[Object], [Object]], "type": "Condos"}]
- (NOBRIDGE) LOG  Property details : null

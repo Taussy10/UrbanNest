@@ -70,6 +70,7 @@ const handleCardPress = (id: string) => router.push(`/properties/${id}`);
 
 
 
+
       <FlatList
         // number of times we want to render items
         // data={[]}
@@ -86,7 +87,6 @@ const handleCardPress = (id: string) => router.push(`/properties/${id}`);
             {/* just for temporor */}
           
        
-
 
             {/* Featured Header */}
             <View className=" mb-3 flex-row items-center  justify-between">
