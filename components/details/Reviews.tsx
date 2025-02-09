@@ -7,17 +7,9 @@ const Reviews = ({property}) => {
   return (
     //Review Container 
      <View
-      className=' mb-6'>
+      className='  mb-6'>
         {/* for stars and select all */}
-        <View className=" flex-row items-center mb-2  justify-between">
-          <View className=" flex-row items-center ">
-            <Image source={icons.star} className="  size-5"
-            />
-            <Text className="  font-bold"> 4.8 (1,275 reviews)</Text>
-          </View>
-    
-          <Text className="  font-bold  text-primary-300">Select All</Text>
-        </View>
+      
     
         {/* Container for image and name */}
         <View className=" flex-row  items-center  mb-2 gap-3 ">

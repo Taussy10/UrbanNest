@@ -82,22 +82,22 @@ const handleCardPress = (id: string) => router.push(`/properties/${id}`);
         ListHeaderComponent={
           <View>
             {/* Navigation */}
-            <View className=' flex-row items-center justify-between'>
+            <Text className='   my-3 text-xl font-rubik-bold text-center w-full'>Search for Your Ideal Home</Text>
+                        {/* <View className=' flex-row items-center justify-between'>
               <TouchableOpacity 
               onPress={() => router.back()}
               className="  size-7 rounded-full  bg-primary-200 p-2
                justify-center items-center
               ">
               <Image source={icons.backArrow} className=' size-7'/>
-              </TouchableOpacity>
-              <Text className=' text-xs font-rubik-bold'>Search for Your Ideal Home</Text>
+              </TouchableOpacity> 
               <Image source={icons.bell}
               className=' size-7'
               />
-            </View>
+            </View>  */}
             <Search />
             <Filters />
-            <Text className=' my-5 text-2xl text-black-300  font-bold text-center'> Found {properties?.length} Apartments</Text>
+            <Text className=' my-5 text-2xl text-black-300  font-bold text-center'> Found {properties?.length} {properties?.length > 1 ?(<Text>Properties</Text>): (<Text>Property</Text>) } </Text>
           </View>
         }
 

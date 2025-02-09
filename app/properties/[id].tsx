@@ -8,7 +8,7 @@ import images from "~/constants/images";
 import { useAppwrite } from "~/hooks/useAppwrite";
 import { getPropertyDetails } from "~/appwrite/appwrite";
 import Reviews from "~/components/details/Reviews";
-
+import AntDesign from '@expo/vector-icons/AntDesign';
 const Details = () => {
   // const { id } = useLocalSearchParams<{ id?: string }>();
 
@@ -46,19 +46,14 @@ const Details = () => {
     <View className=" mt-5 flex-row items-center justify-between   px-4">
       
 <Pressable onPress={() => router.back()}>
-    <Image  source={icons.backArrow}
-    className=" size-7 "/>
+    {/* <Image  source={icons.backArrow}
+    className=" size-7 "/> */}
+    <AntDesign name="arrowleft" size={24} color={"white"}  />
 </Pressable>
 
       <View className=" flex-row items-center  gap-5">
-      <Image source={icons.heart}
-          className=" size-7"
-
-      />
-      <Image source={icons.wallet}
-          className=" size-7"
-
-      />
+      <AntDesign name="hearto" size={24} color="white" />
+      <AntDesign name="wallet" size={24} color="white" />
       </View>
     </View>
 
@@ -92,8 +87,9 @@ const Details = () => {
     
           {/* for star and text */}
           <View className=" flex-row items-center  ">
+            <Text className=" mr-1"> {property?.rating}</Text>
             <Image source={icons.star} className="  size-5" />
-            <Text> {property?.rating} ({property?.reviews?.length} reviews)</Text>
+
           </View>
     
         </View>
@@ -264,8 +260,14 @@ also can't use ScrollView and Flatlist in same orientation so will use array.map
         <Image source={images.map} resizeMode="contain" className="  h-52 w-full " />
       </View>
 
+
+  <View className=" flex-row items-center mb-2  justify-between">
+      <Text className=" font-rubik-bold  text-xl ">Reviews</Text>
+    
+          <Text className="  font-bold  text-primary-300">Select All</Text>
+        </View>
       {
-        property?.reviews?.review?   (<Reviews property={property} />): (<Text className=" text-xl font-bold">No Reviews Found</Text>)        
+        property?.reviews?.review?   (<Reviews property={property} />): (<Text className=" text-xl font-bold mb-6">No Reviews Found</Text>)        
 
       }
        
