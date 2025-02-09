@@ -1,22 +1,9 @@
 import {
-  FlatList,
-  Image,
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  View,
-  Dimensions,
-  Platform,
-  ImageBackground,
-} from "react-native";
+  FlatList, Image, ScrollView, Text,TouchableOpacity,View,Dimensions,Platform,ImageBackground,} from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import icons from "~/constants/icons";
 import images from "~/constants/images";
-// import Comment from "~/components/Comment";
-import { facilities } from "~/constants/data";
-
-// import { useAppwrite } from "@/lib/useAppwrite";
 import { useAppwrite } from "~/hooks/useAppwrite";
 import { getPropertyDetails } from "~/appwrite/appwrite";
 
@@ -35,10 +22,11 @@ const Details = () => {
   
   
   
-  console.log("Property details :", property);
+ 
   console.log("Property reviews :", property?.reviews?.length);
 
   console.log("Property Details" ,property);
+  console.log("Property Gallery" ,property?.gallery[0].image);
   
   return (
    
@@ -187,40 +175,65 @@ const Details = () => {
     
     
     
-    
-    <FlatList 
-    data={property?.facilities}
-    numColumns={4}
-    renderItem={({item}) => {
-      console.log("Facilites name from id.tsx" ,item);
-      
-      return(
-        <View className=' flex-col items-center justify-center mr-6  mb-6'>
-       <View className=' justify-center items-center  bg-primary-200   size-16  rounded-full  p-4 mb-1 '>
-     <Image  
-      source={icons.carPark} 
-      className='  size-8 rounded-full' /> 
+ 
+
+{/* We can't use Flatlist cause we have to use ScrollView 
+but flatlist in vertical but with numcols and vertical can't happen possible
+also can't use ScrollView and Flatlist in same orientation so will use array.map 
+*/}
+
+
+{/* How we build it using array */}
+{/* Firstly gave full width: if you don't write it will still take full width */}
+{/* flex wrap is use for if it exceed more than width then move to row  */}
+<View className="flex-row flex-wrap  w-full  justify-between">
+  {/* index is given by map method and it give it each element */}
+      {property?.facilities.map((item:string, index:number) => {
+        console.log("Item & index :",item , index);
+        return(
+          // View for each item taking 25% space of full width: so in one row 4 items 
+          // can display
+        <View key={index} className="items-center mb-4 w-1/4   ">
+          <View className="bg-primary-200 size-16 rounded-full p-4 mb-2">
+            <Image
+              source={icons.phone}
+              className="size-8 rounded-full"
+              resizeMode="contain"
+            />
+          </View>
+          <Text className="text-center text-xs">{item}</Text>
         </View>
-        <Text 
-        numberOfLines={1} className=' text-center font-rubik'>{item?.slice(0,8)}...</Text>
-        </View>
-      )
-    
-    }}
-    />
-    
-    
-     </View>
-    
+      )})}
+    </View>
+    </View>
+
+
+{/* You can use flatlist cause 
+1. Just have to horizontal so no virtualisation errror
+2. Data in array */}
     {/* Gallery container */}
       <View className=' mb-4'>
           <Text className=' text-2xl mb-3  font-bold'>Gallery</Text>
     
-          <Image
-            source={images.newYork}
-            // resizeMode="contain"
+    <FlatList 
+    horizontal={true}
+    data={property?.gallery||[]}
+    // ListHeaderComponent={}
+     showsHorizontalScrollIndicator={false}
+    ListEmptyComponent={<Text>No Images Found</Text>}
+    renderItem={({item}) => {
+      console.log("Item from galery",item);
+      return(
+        <View className=" mx-2">
+           <Image
+            source={{uri: item?.image}}
             className=" w-48 h-48  rounded-2xl "
           />
+        </View>
+      )
+    }}
+    />
+          
         </View>
     
     
@@ -252,7 +265,7 @@ const Details = () => {
     
         {/* Container for image and name */}
         <View className=" flex-row  items-center  mb-2 gap-3 ">
-          <Image source={images.avatar} className="  size-14" />
+          <Image source={images?.avatar} className="  size-14" />
           <Text className='  text-xl font-bold'>Natasya Wilodra</Text>
           {/* actually one more thing image and name are one group  */}
         </View>

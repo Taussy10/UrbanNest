@@ -25,7 +25,6 @@ import NoResults from '~/components/home/no-results';
 const Home = () => {
   const router = useRouter()
   const params = useLocalSearchParams<{ query?: string; filter?: string }>();
-  const [recommendProps, setRecommendProps] = useState([])
 
  
   console.log("params :",params);
