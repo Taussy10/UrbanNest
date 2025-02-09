@@ -80,9 +80,9 @@ const handleCardPress = (id: string) => router.push(`/properties/${id}`);
         keyExtractor={(item) => item.$id}
 
         ListHeaderComponent={
-          <View>
+          <View className=' mt-2 '>
             {/* Navigation */}
-            <Text className='   my-3 text-xl font-rubik-bold text-center w-full'>Search for Your Ideal Home</Text>
+            <Text className='   mb-6 text-xl font-rubik-bold text-center w-full'>Search for Your Ideal Home</Text>
                         {/* <View className=' flex-row items-center justify-between'>
               <TouchableOpacity 
               onPress={() => router.back()}
@@ -97,7 +97,9 @@ const handleCardPress = (id: string) => router.push(`/properties/${id}`);
             </View>  */}
             <Search />
             <Filters />
-            <Text className=' my-5 text-2xl text-black-300  font-bold text-center'> Found {properties?.length} {properties?.length > 1 ?(<Text>Properties</Text>): (<Text>Property</Text>) } </Text>
+            {/* Here I'm adding mt-2 +4 = 6 and mb-4 but should be 6 why?
+            you can be flexible for few times */}
+            <Text className=' mb-4 mt-2  text-2xl text-black-300  font-bold text-center'> Found {properties?.length} {properties?.length > 1 ?(<Text>Properties</Text>): (<Text>Property</Text>) } </Text>
           </View>
         }
 

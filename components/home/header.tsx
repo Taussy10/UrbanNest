@@ -14,7 +14,8 @@ const Header = () => {
 
     // header container(having 2 groups 1.Header-pfp-name , 2. Notification)
     <View
-      className="  flex-row  items-center justify-between  mb-5">
+    // The diff between statusBar and first element is 8pixel
+      className="  flex-row  items-center justify-between  mb-6 mt-2 ">
 
       {/* subGroup1: Headerf-pfp-name cotntainer for right side image and text */}
       <View

@@ -10,7 +10,7 @@ import { Models } from 'react-native-appwrite';
 export const FeaturedCard = ({onPress , item:{image , rating,address, price} }:props) => {
   
   return (
-    <TouchableOpacity activeOpacity={0.8} onPress={onPress}>
+    <TouchableOpacity className=' mb-6' activeOpacity={0.8} onPress={onPress}>
       {/* h-72 w-52 */}
       <ImageBackground source={{uri: image}} className="   h-72 w-52 rounded-2xl ">
         {/* for giving gradient to Image */}

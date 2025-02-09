@@ -34,7 +34,7 @@ const Search = () => {
 
   return (
     // Main container
-    <View className="mb-5  p-2 flex-row items-center justify-between rounded-lg bg-[#FBFBFD]  ">
+    <View className="mb-6  p-2 flex-row items-center justify-between rounded-lg bg-[#FBFBFD]  ">
       {/* Left container: Icon and TextInput */}
       <View className="flex-row items-center gap-2 flex-1">
         <Image source={icons.search} resizeMode="contain" className="w-5 h-5" />

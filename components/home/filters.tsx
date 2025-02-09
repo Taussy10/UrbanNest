@@ -31,7 +31,7 @@ const Filters = () => {
     horizontal
 showsHorizontalScrollIndicator={false}
 
-    className= "  mb-3  w-full  gap-7 mr-8  " >
+    className= "   mb-4  w-full  gap-7 mr-8  " >
         {
             categories.map((item, index) =>
             <TouchableOpacity

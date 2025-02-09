@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, StatusBar } from 'react-native'
 import { Tabs } from 'expo-router';
 import icons from '~/constants/icons';
 import images from '~/constants/images';
@@ -27,6 +27,7 @@ const TabIcon = ({icon ,  title ,color }:tabIconType) => {
 const TabsLayout = () => {
 
   return (
+    
     <Tabs
     screenOptions={{
       headerShown: false,
@@ -99,6 +100,8 @@ const TabsLayout = () => {
    
   )
 }
+     
+
 export default TabsLayout
 
 const styles = StyleSheet.create({})

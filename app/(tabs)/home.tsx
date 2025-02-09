@@ -61,13 +61,10 @@ useEffect(() => {
 // pushing the rotuer sending param as id
 const handleCardPress = (id: string) => router.push(`/properties/${id}`);
 
-  const moveDetails = () => {
-    router.push("/details")
-  }
+  
   return (
-    <SafeAreaView className="flex-1 bg-white    p-4 ">
-
-
+    <SafeAreaView className="flex-1 bg-white px-4 ">
+   <StatusBar barStyle="light-content" />
 
 
       <FlatList
@@ -88,7 +85,7 @@ const handleCardPress = (id: string) => router.push(`/properties/${id}`);
        
 
             {/* Featured Header */}
-            <View className=" mb-3 flex-row items-center  justify-between">
+            <View className=" mb-4 flex-row items-center  justify-between">
               <Text className=" text-2xl  font-semibold">Featured</Text>
               <Text className="text-xl font-bold text-blue-500">See All</Text>
             </View>
@@ -118,7 +115,7 @@ const handleCardPress = (id: string) => router.push(`/properties/${id}`);
            
 
 {/* Recommendation Header */}
-            <View className=" mb-3 flex-row items-center  justify-between">
+            <View className=" mb-4 flex-row items-center  justify-between">
               <Text className=" text-2xl  font-semibold">Recommendation</Text>
               <Text className="text-xl font-bold text-blue-500">See All</Text>
             </View>
