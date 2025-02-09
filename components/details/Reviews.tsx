@@ -3,23 +3,26 @@ import { StyleSheet, Text, View , Image } from 'react-native'
 import React from 'react'
 import icons from '~/constants/icons'
 
-const Reviews = ({property}) => {
+type props = {
+  property: string
+}
+
+const Reviews = ({property}:props) => {
   return (
     //Review Container 
-     <View
-      className='  mb-6'>
+     <View>
         {/* for stars and select all */}
       
     
         {/* Container for image and name */}
-        <View className=" flex-row  items-center  mb-2 gap-3 ">
+        <View className=" flex-row  items-center  mb-4 gap-3 ">
           <Image source={{uri: property?.reviews?.avatar}} className=" rounded-full  size-14"   />
           <Text className='  text-xl font-bold'>{property?.reviews?.name}</Text>
           {/* actually one more thing image and name are one group  */}
         </View>
     
         <Text
-        className='  text-gray-500 text-[14px] mb-3'
+        className='  text-gray-500 text-[14px] mb-4 '
         >{property?.reviews?.review}
         </Text>
     

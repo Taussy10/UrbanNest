@@ -10,8 +10,6 @@ import { getPropertyDetails } from "~/appwrite/appwrite";
 import Reviews from "~/components/details/Reviews";
 import AntDesign from '@expo/vector-icons/AntDesign';
 const Details = () => {
-  // const { id } = useLocalSearchParams<{ id?: string }>();
-
  
     const {id} = useLocalSearchParams<{id?: string}>()
   
@@ -26,24 +24,23 @@ const Details = () => {
     
   
   
-    // property?.facility.map((item:string, index:number) => {
-    //   console.log("Item & index :",item , index) }
-
   
-  return (
-   
-     <SafeAreaView className=" flex-1 bg-white">
-         <ScrollView>
-    {/* mainGroup-1: HeaderGroup  */}
+  return ( 
+  <SafeAreaView className=" flex-1 bg-white">
+      <ScrollView
+     
+      >
+        
+    {/* mainGroup-1: For Image and Header*/}
     <View
-            className=' mb-6'
-            >
+            className=' mb-6'>
+              
             <ImageBackground
             source= {{uri: property?.image}} className=" h-[375px] w-full"
             >
     
     {/* Top Navigation */}
-    <View className=" mt-5 flex-row items-center justify-between   px-4">
+    <View className=" mt-2 flex-row items-center justify-between   px-4">
       
 <Pressable onPress={() => router.back()}>
     {/* <Image  source={icons.backArrow}
@@ -51,32 +48,32 @@ const Details = () => {
     <AntDesign name="arrowleft" size={24} color={"white"}  />
 </Pressable>
 
-      <View className=" flex-row items-center  gap-5">
       <AntDesign name="hearto" size={24} color="white" />
-      <AntDesign name="wallet" size={24} color="white" />
-      </View>
     </View>
 
           {/* Write app bar code */}
             </ImageBackground>
             
             </View>
+
+
+
      {/* mainGroup-2: DetailsGroup: wrap it in View cause it has >1 elements(subGroups) */}
-     <View className='flex-1 pl-4 pr-4   bg-white  mb-6'>
+     <View className='flex-1 px-4   bg-white  '>
       
       {/* 1. Title & Basic Info container: it  will have 3 groups: title , stars and basic info */}
       <View
-      className=' mb-4'
+      className=' mb-6'
       >
         {/* Title */}
         <View
-        className=' mb-3'
+        className=' mb-4'
         >
           <Text className=' font-semibold text-2xl '>{property?.name}</Text>
         </View>
     
-        {/*star and apartment  */}
-        <View className=" flex-row gap-2 mb-3 items-center">
+        {/*For star and Type   */}
+        <View className=" flex-row gap-2 mb-4 items-center">
           {/* container for bg color rounded */}
           <View
           className="  rounded-full  bg-primary-200 p-2 "
@@ -95,7 +92,7 @@ const Details = () => {
         </View>
     
         {/* bed , bath 2000sqft container */}
-        <View className=" flex-row items-center  gap-5">
+        <View className=" flex-row items-center   gap-5">
     
           {/* for bed */}
           <View className=" w-24  flex-row  items-center gap-3 ">
@@ -131,9 +128,9 @@ const Details = () => {
     
     
       {/* Agent Container: will have text , and 2 groups 1. pfp &name 2. icons  */}
-      <View className=" mb-4">
+      <View className=" mb-6">
         {/* Has two subgroups: Agent contact with name and overview */}
-        <Text className=' text-2xl mb-2  font-bold'>Agent</Text>
+        <Text className=' text-2xl mb-4 font-bold'>Agent</Text>
     
         {/* for pfp&name and contact so will have two groups */}
         <View className="  flex-row  items-center justify-between ">
@@ -170,8 +167,8 @@ const Details = () => {
         {/* Agent Container */}
       </View>
     
-          {/* Overview container: single  element  */}
-        <View className=" mb-4">
+          {/* Overview(of property) container: single  element  */}
+        <View className=" mb-6 ">
           <Text className='text-2xl mb-1  font-bold'>Overview</Text>
           <Text className='  text-gray-500 text-[16px]'>
            {property?.description}
@@ -179,8 +176,8 @@ const Details = () => {
         </View>
     
       {/* for facilites container */}
-      <View className=" mb-4  ">
-        <Text className=' text-2xl mb-3  font-bold' >Facilities</Text>
+      <View className=" mb-6  ">
+        <Text className=' text-2xl mb-4  font-bold' >Facilities</Text>
     
     
     
@@ -203,7 +200,7 @@ also can't use ScrollView and Flatlist in same orientation so will use array.map
         return(
           // View for each item taking 25% space of full width: so in one row 4 items 
           // can display
-        <View key={index} className="items-center mb-4 w-1/4   ">
+        <View key={index} className="items-center  w-1/4   ">
           <View className="bg-primary-200 size-16 rounded-full p-4 mb-2">
             <Image
               source={{uri: item?.icon}}
@@ -211,7 +208,7 @@ also can't use ScrollView and Flatlist in same orientation so will use array.map
               resizeMode="contain"
             />
           </View>
-          <Text className="text-center   text-[13px]  font-bold">{item.title.slice(0,6)}...</Text>
+          <Text className="text-center   text-[13px]  font-bold">{item.title.slice(0,7)}..</Text>
         </View>
       )})}
     </View>
@@ -223,7 +220,7 @@ also can't use ScrollView and Flatlist in same orientation so will use array.map
 1. Just have to horizontal so no virtualisation errror
 2. Data in array */}
     {/* Gallery container */}
-      <View className=' mb-4'>
+      <View className=' mb-6 '>
           <Text className=' text-2xl mb-3  font-bold'>Gallery</Text>
     
     <FlatList 
@@ -248,35 +245,37 @@ also can't use ScrollView and Flatlist in same orientation so will use array.map
     
     
       {/* Location container */}
-      <View className=' mb-4'>
+      <View className=' mb-6 '>
         <Text className=' text-2xl mb-1  font-bold'>Location</Text>
         {/* address container */}
         <View className=" flex-row gap-2 items-center mb-2 ">
           <Image source={icons.location} className=" size-7" />
           <Text>{property?.geolocation}</Text>
         </View>
-    
         {/* Map */}
         <Image source={images.map} resizeMode="contain" className="  h-52 w-full " />
       </View>
 
 
-  <View className=" flex-row items-center mb-2  justify-between">
+
+{/* Container for review, Here I'm breaking law of consitency cause in mb-4 looks greate
+not in mb-6*/} 
+<View className=" mb-4  ">
+  <View className=" flex-row items-center mb-4  justify-between">
       <Text className=" font-rubik-bold  text-xl ">Reviews</Text>
-    
           <Text className="  font-bold  text-primary-300">Select All</Text>
         </View>
       {
         property?.reviews?.review?   (<Reviews property={property} />): (<Text className=" text-xl font-bold mb-6">No Reviews Found</Text>)        
 
       }
-       
+       </View>
         
      
  
     
       {/* For price and Button */}
-      <View className=" flex-row items-center justify-between ">
+      <View className=" flex-row items-center justify-between  mb-6">
         {/* why have we put  Price text and number inside container ? Look in parent there is flex row then children will flex row but we don't want that 
         that's why we have wrapped inside view and view by default flex-col*/}
         <View>
