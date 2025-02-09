@@ -28,7 +28,7 @@ const Details = () => {
   return ( 
   <SafeAreaView className=" flex-1 bg-white">
       <ScrollView
-     
+     showsVerticalScrollIndicator={false}
       >
         
     {/* mainGroup-1: For Image and Header*/}

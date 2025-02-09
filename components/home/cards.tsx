@@ -10,11 +10,20 @@ import { Models } from 'react-native-appwrite';
 export const FeaturedCard = ({onPress , item:{image , rating,address, price} }:props) => {
   
   return (
-    <TouchableOpacity className=' mb-6' activeOpacity={0.8} onPress={onPress}>
+    // When Image border-radius doesn't change then use this 
+    // When you add Image in a container then RN doesn't force
+    //  re-drawing based on border-radius of contaniner 
+    // so by overflow-hidden we clip the content
+    // Then  React native force to change the dimension of image applies border radius
+
+    // "Clipping" means hiding any part of an element that 
+    // extends beyond its boundaries.
+
+    <TouchableOpacity className=' mb-6 ' activeOpacity={0.8} onPress={onPress}>
       {/* h-72 w-52 */}
-      <ImageBackground source={{uri: image}} className="   h-72 w-52 rounded-2xl ">
+      <ImageBackground source={{uri: image}} className="  overflow-hidden rounded-xl   h-72 w-52  ">
         {/* for giving gradient to Image */}
-        <Image source={images.cardGradient} className=" absolute bottom-0 size-full rounded-2xl" />
+        <Image source={images.cardGradient} className=" absolute bottom-0 size-full " />
         {/* for star */}
         <View style={styles.starContainer}>
           <Image source={icons.star} resizeMode="contain" className="  size-3.5 " />
@@ -22,14 +31,14 @@ export const FeaturedCard = ({onPress , item:{image , rating,address, price} }:p
         </View>
 
         {/* for image text */}
-        <View style={{ position: 'absolute', bottom: 10, paddingLeft: 8, paddingRight: 8 }}>
+        <View style={{ position: 'absolute', bottom: 14, paddingLeft: 8, paddingRight: 8 }}>
           <Text
             className="font-rubik-extrabold text-xl  text-white"
             // won't pass one line if yeah then ...
             numberOfLines={1}>
             {/* {item?.name} */}
           </Text>
-          <Text className=" text-white">{address}</Text>
+          <Text className=" text-white mb-3 ">{address}</Text>
 
           {/* for heart */}
           <View className=" w-full flex-row items-center justify-between ">

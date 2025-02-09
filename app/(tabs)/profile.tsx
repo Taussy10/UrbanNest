@@ -1,7 +1,6 @@
-import { Image, ImageSourcePropType, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import images from '~/constants/images';
 import icons from '../../constants/icons';
 import { useAuthContext } from '~/context/auth-context';
 
