@@ -11,7 +11,8 @@ const Reviews = ({property}) => {
         {/* for stars and select all */}
         <View className=" flex-row items-center mb-2  justify-between">
           <View className=" flex-row items-center ">
-            <Image source={icons.star} className="  size-5" />
+            <Image source={icons.star} className="  size-5"
+            />
             <Text className="  font-bold"> 4.8 (1,275 reviews)</Text>
           </View>
     
@@ -35,7 +36,9 @@ const Reviews = ({property}) => {
           {/* for heart and count */}
     
           <View className=" flex-row  items-center gap-2">
-            <Image source={icons.blueHeart} className="  size-7  border-blue-500  text-blue-500" />
+            <Image source={icons.blueHeart} className="  size-7  border-blue-500  text-blue-500"
+
+            />
             <Text>938</Text>
           </View>
     

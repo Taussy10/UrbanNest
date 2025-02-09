@@ -21,11 +21,15 @@ const Details = () => {
       },
     });
   
-    console.log("Reviews" ,property?.reviews?.avatar);
+    console.log("Property from ID :" ,property);
     
   
   
- 
+    // property?.facility.map((item:string, index:number) => {
+    //   console.log("Item & index :",item , index) }
+property?.facility.map((item, index)=> {
+  console.log("Item & index :",item , index) 
+})
 
   
   return (
@@ -178,24 +182,26 @@ also can't use ScrollView and Flatlist in same orientation so will use array.map
 {/* flex wrap is use for if it exceed more than width then move to row  */}
 <View className="flex-row flex-wrap  w-full  justify-between">
   {/* index is given by map method and it give it each element */}
-      {property?.facilities.map((item:string, index:number) => {
-        // console.log("Item & index :",item , index);
+      {/* {property?.facilities.map((item:string, index:number) => { */}
+        {property?.facility.map((item:string, index:number)=>{
+        console.log("Item & index :",item , index);
         return(
           // View for each item taking 25% space of full width: so in one row 4 items 
           // can display
         <View key={index} className="items-center mb-4 w-1/4   ">
           <View className="bg-primary-200 size-16 rounded-full p-4 mb-2">
             <Image
-              source={icons.phone}
+              source={{uri: item?.icon}}
               className="size-8 rounded-full"
               resizeMode="contain"
             />
           </View>
-          <Text className="text-center text-xs">{item}</Text>
+          <Text className="text-center   text-[13px]  font-bold">{item.title.slice(0,6)}...</Text>
         </View>
       )})}
     </View>
     </View>
+
 
 
 {/* You can use flatlist cause 
@@ -268,3 +274,5 @@ also can't use ScrollView and Flatlist in same orientation so will use array.map
 };
 
 export default Details
+
+// Item & index : {"$collectionId": "67a861ae000497ceec29", "$createdAt": "2025-02-09T08:09:52.322+00:00", "$databaseId": "6798bb3a002bafd474de", "$id": "67a862d10008a998722e", "$permissions": [], "$updatedAt": "2025-02-09T08:37:48.458+00:00", "icon": "https://cloud.appwrite.io/v1/storage/buckets/67a8620f003312df50a0/files/67a8624d000c2e65af4c/view?project=6793d6a40001564b515f&mode=admin", "title": "Swimming Pool"} 0

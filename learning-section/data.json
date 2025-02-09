@@ -168,7 +168,8 @@
             "Swimming pool"
         ],
         "gallery": [
-            [Object]
+            [Object
+            ]
         ],
         "geolocation": "192.168.1.20, 192.168.1.20",
         "image": "https://images.unsplash.com/photo-1600585153490-76fb20a32601?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -349,3 +350,212 @@
         "type": "Condos"
     }
 ]
+
+ Property {
+    "$collectionId": "6798be370000a1ba7c95",
+    "$createdAt": "2025-01-28T16:06:20.796+00:00",
+    "$databaseId": "6798bb3a002bafd474de",
+    "$id": "6799007a0039508d569b",
+    "$permissions": [
+        "read(\"user:67947301501e134601b7\")",
+        "update(\"user:67947301501e134601b7\")",
+        "delete(\"user:67947301501e134601b7\")"
+    ],
+    "$updatedAt": "2025-02-09T06:51:17.551+00:00",
+    "address": "123 Property Street, City 1",
+    "agent": {
+        "$collectionId": "6798bb850018243b4326",
+        "$createdAt": "2025-01-28T16:05:49.626+00:00",
+        "$databaseId": "6798bb3a002bafd474de",
+        "$id": "6799005b00307d0afb12",
+        "$permissions": [
+            "read(\"user:67947301501e134601b7\")",
+            "update(\"user:67947301501e134601b7\")",
+            "delete(\"user:67947301501e134601b7\")"
+        ],
+        "$updatedAt": "2025-01-28T16:05:49.626+00:00",
+        "avatar": "https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "email": "agent1@example.com",
+        "name": "Agent 1"
+    },
+    "area": 2374,
+    "bathrooms": 1,
+    "bedrooms": 5,
+    "description": "This is the description for Property 1.",
+    "facilities": [
+        "Swimming pool",
+        "Sports Center",
+        "Pet Center",
+        "Cutlery",
+        "Laundry",
+        "Wifi",
+        "Gym"
+    ],
+    "gallery": [
+        {
+            "$collectionId": "67a2228e002e520ddcdf",
+            "$createdAt": "2025-02-04T14:23:19.729+00:00",
+            "$databaseId": "6798bb3a002bafd474de",
+            "$id": "67a222d90017d32bdee2",
+            "$permissions": [],
+            "$updatedAt": "2025-02-09T06:51:17.876+00:00",
+            "image": "https://images.unsplash.com/photo-1635108198979-9806fdf275c6?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            "$collectionId": "67a2228e002e520ddcdf",
+            "$createdAt": "2025-02-04T14:23:46.389+00:00",
+            "$databaseId": "6798bb3a002bafd474de",
+            "$id": "67a222f400035d280782",
+            "$permissions": [],
+            "$updatedAt": "2025-02-08T05:56:23.226+00:00",
+            "image": "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            "$collectionId": "67a2228e002e520ddcdf",
+            "$createdAt": "2025-02-04T14:23:57.267+00:00",
+            "$databaseId": "6798bb3a002bafd474de",
+            "$id": "67a222fe003b5e33e672",
+            "$permissions": [],
+            "$updatedAt": "2025-02-09T06:51:17.733+00:00",
+            "image": "https://images.unsplash.com/photo-1600435335786-d74d2bb6de37?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            "$collectionId": "67a2228e002e520ddcdf",
+            "$createdAt": "2025-02-04T14:24:09.134+00:00",
+            "$databaseId": "6798bb3a002bafd474de",
+            "$id": "67a2230a0030589a177d",
+            "$permissions": [],
+            "$updatedAt": "2025-02-09T06:51:17.808+00:00",
+            "image": "https://images.unsplash.com/photo-1604328702728-d26d2062c20b?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+    ],
+    "geolocation": "192.168.1.1, 192.168.1.1",
+    "image": "https://images.unsplash.com/photo-1605146768851-eda79da39897?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "name": "Property 1",
+    "price": 5063,
+    "rating": 4,
+    "reviews": {
+        "$collectionId": "6798bd0b001e21f56ced",
+        "$createdAt": "2025-01-28T16:06:01.263+00:00",
+        "$databaseId": "6798bb3a002bafd474de",
+        "$id": "679900670018d622dae6",
+        "$permissions": [
+            "read(\"user:67947301501e134601b7\")",
+            "update(\"user:67947301501e134601b7\")",
+            "delete(\"user:67947301501e134601b7\")"
+        ],
+        "$updatedAt": "2025-02-09T06:51:17.970+00:00",
+        "avatar": "https://images.unsplash.com/photo-1517331671191-ddc2c6d3ebd1?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "name": "Reviewer 4",
+        "rating": 5,
+        "review": "This is a review by Reviewer 4."
+    },
+    "type": "Townhouses"
+}
+
+(NOBRIDGE) LOG  Property from ID : {
+    "$collectionId": "6798be370000a1ba7c95",
+    "$createdAt": "2025-01-28T16:06:20.796+00:00",
+    "$databaseId": "6798bb3a002bafd474de",
+    "$id": "6799007a0039508d569b",
+    "$permissions": [
+        "read(\"user:67947301501e134601b7\")",
+        "update(\"user:67947301501e134601b7\")",
+        "delete(\"user:67947301501e134601b7\")"
+    ],
+    "$updatedAt": "2025-02-09T08:31:12.848+00:00",
+    "address": "123 Property Street, City 1",
+    "agent": {
+        "$collectionId": "6798bb850018243b4326",
+        "$createdAt": "2025-01-28T16:05:49.626+00:00",
+        "$databaseId": "6798bb3a002bafd474de",
+        "$id": "6799005b00307d0afb12",
+        "$permissions": [
+            "read(\"user:67947301501e134601b7\")",
+            "update(\"user:67947301501e134601b7\")",
+            "delete(\"user:67947301501e134601b7\")"
+        ],
+        "$updatedAt": "2025-01-28T16:05:49.626+00:00",
+        "avatar": "https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "email": "agent1@example.com",
+        "name": "Agent 1"
+    },
+    "area": 2374,
+    "bathrooms": 1,
+    "bedrooms": 5,
+    "description": "This is the description for Property 1.",
+    "facilities": [
+        "Swimming pool",
+        "Sports Center",
+        "Pet Center",
+        "Cutlery",
+        "Laundry",
+        "Wifi",
+        "Gym"
+    ],
+    "facility": [],
+    "gallery": [
+        {
+            "$collectionId": "67a2228e002e520ddcdf",
+            "$createdAt": "2025-02-04T14:23:19.729+00:00",
+            "$databaseId": "6798bb3a002bafd474de",
+            "$id": "67a222d90017d32bdee2",
+            "$permissions": [Array
+            ],
+            "$updatedAt": "2025-02-09T08:31:14.136+00:00",
+            "image": "https://images.unsplash.com/photo-1635108198979-9806fdf275c6?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            "$collectionId": "67a2228e002e520ddcdf",
+            "$createdAt": "2025-02-04T14:23:46.389+00:00",
+            "$databaseId": "6798bb3a002bafd474de",
+            "$id": "67a222f400035d280782",
+            "$permissions": [Array
+            ],
+            "$updatedAt": "2025-02-09T08:31:14.269+00:00",
+            "image": "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            "$collectionId": "67a2228e002e520ddcdf",
+            "$createdAt": "2025-02-04T14:23:57.267+00:00",
+            "$databaseId": "6798bb3a002bafd474de",
+            "$id": "67a222fe003b5e33e672",
+            "$permissions": [Array
+            ],
+            "$updatedAt": "2025-02-09T08:31:14.603+00:00",
+            "image": "https://images.unsplash.com/photo-1600435335786-d74d2bb6de37?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            "$collectionId": "67a2228e002e520ddcdf",
+            "$createdAt": "2025-02-04T14:24:09.134+00:00",
+            "$databaseId": "6798bb3a002bafd474de",
+            "$id": "67a2230a0030589a177d",
+            "$permissions": [Array
+            ],
+            "$updatedAt": "2025-02-09T08:31:14.691+00:00",
+            "image": "https://images.unsplash.com/photo-1604328702728-d26d2062c20b?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+    ],
+    "geolocation": "192.168.1.1, 192.168.1.1",
+    "image": "https://images.unsplash.com/photo-1605146768851-eda79da39897?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "name": "Property 1",
+    "price": 5063,
+    "rating": 4,
+    "reviews": {
+        "$collectionId": "6798bd0b001e21f56ced",
+        "$createdAt": "2025-01-28T16:06:01.263+00:00",
+        "$databaseId": "6798bb3a002bafd474de",
+        "$id": "679900670018d622dae6",
+        "$permissions": [
+            "read(\"user:67947301501e134601b7\")",
+            "update(\"user:67947301501e134601b7\")",
+            "delete(\"user:67947301501e134601b7\")"
+        ],
+        "$updatedAt": "2025-02-09T08:31:14.829+00:00",
+        "avatar": "https://images.unsplash.com/photo-1517331671191-ddc2c6d3ebd1?q=60&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "name": "Reviewer 4",
+        "rating": 5,
+        "review": "This is a review by Reviewer 4."
+    },
+    "type": "Townhouses"
+}
