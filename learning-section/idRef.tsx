@@ -246,4 +246,3 @@ const styles = StyleSheet.create({});
     //     <Text 
     //     numberOfLines={1} className=' text-center font-rubik'>{item?.slice(0,8)}...</Text>
     //     </View>
-    console.log("Property Gallery" ,property?.gallery[0].image);

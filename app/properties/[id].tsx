@@ -6,6 +6,7 @@ import icons from "~/constants/icons";
 import images from "~/constants/images";
 import { useAppwrite } from "~/hooks/useAppwrite";
 import { getPropertyDetails } from "~/appwrite/appwrite";
+import Reviews from "~/components/details/Reviews";
 
 const Details = () => {
   // const { id } = useLocalSearchParams<{ id?: string }>();
@@ -20,13 +21,12 @@ const Details = () => {
       },
     });
   
+    console.log("Reviews" ,property?.reviews?.avatar);
+    
   
   
  
-  console.log("Property reviews :", property?.reviews?.length);
 
-  console.log("Property Details" ,property);
-  console.log("Property Gallery" ,property?.gallery[0].image);
   
   return (
    
@@ -163,16 +163,6 @@ const Details = () => {
       <View className=" mb-4  ">
         <Text className=' text-2xl mb-3  font-bold' >Facilities</Text>
     
-    {/* For Facilities: and they are in array so gonna use array(map) method 
-    
-       <View
-     className=' justify-center items-center  bg-primary-200 size-14  rounded-full p-2 mb-1 '>
-     <Image  
-      source={icons.carPark} 
-      className='  size-8 rounded-full' /> 
-    </View> 
-     */} 
-    
     
     
  
@@ -189,7 +179,7 @@ also can't use ScrollView and Flatlist in same orientation so will use array.map
 <View className="flex-row flex-wrap  w-full  justify-between">
   {/* index is given by map method and it give it each element */}
       {property?.facilities.map((item:string, index:number) => {
-        console.log("Item & index :",item , index);
+        // console.log("Item & index :",item , index);
         return(
           // View for each item taking 25% space of full width: so in one row 4 items 
           // can display
@@ -222,7 +212,6 @@ also can't use ScrollView and Flatlist in same orientation so will use array.map
      showsHorizontalScrollIndicator={false}
     ListEmptyComponent={<Text>No Images Found</Text>}
     renderItem={({item}) => {
-      console.log("Item from galery",item);
       return(
         <View className=" mx-2">
            <Image
@@ -250,46 +239,10 @@ also can't use ScrollView and Flatlist in same orientation so will use array.map
         <Image source={images.map} resizeMode="contain" className="  h-52 w-full " />
       </View>
     
+
       {/* for reviews */}
-      <View
-      className=' mb-6'>
-        {/* for stars and select all */}
-        <View className=" flex-row items-center mb-2  justify-between">
-          <View className=" flex-row items-center ">
-            <Image source={icons.star} className="  size-5" />
-            <Text className="  font-bold"> 4.8 (1,275 reviews)</Text>
-          </View>
-    
-          <Text className="  font-bold  text-primary-300">Select All</Text>
-        </View>
-    
-        {/* Container for image and name */}
-        <View className=" flex-row  items-center  mb-2 gap-3 ">
-          <Image source={images?.avatar} className="  size-14" />
-          <Text className='  text-xl font-bold'>Natasya Wilodra</Text>
-          {/* actually one more thing image and name are one group  */}
-        </View>
-    
-        <Text
-        className='  text-gray-500 text-[14px] mb-3'
-        >
-          The apartment is very clean and modern. I really like the interior design. Looks like
-          I'll feel at home 😍
-        </Text>
-    
-        {/* for heart and days */}
-        <View className=" flex-row items-center justify-between ">
-          {/* for heart and count */}
-    
-          <View className=" flex-row  items-center gap-2">
-            <Image source={icons.blueHeart} className="  size-7  border-blue-500  text-blue-500" />
-            <Text>938</Text>
-          </View>
-    
-          <Text>6 days ago</Text>
-        </View>
-        {/* Review container */}
-      </View>
+      <Reviews property={property} />
+ 
     
       {/* For price and Button */}
       <View className=" flex-row items-center justify-between ">
@@ -310,28 +263,6 @@ also can't use ScrollView and Flatlist in same orientation so will use array.map
       {/* Details container */}
     </View>
          </ScrollView>
-    
-          
-    {/* <FlatList 
-          // Actually the data you are getting in object that's why converted into array
-          // also if no data then show [] empty array otherwise cause if not this then it will give error
-    
-      data={property||[]}
-    keyExtractor={(item) => item?.$id }
-    renderItem={({item}) => {
-      
-      return (
-        // For flatlist screen
-        <View>
-     
-    
-           
-                </View>
-      )
-    }}
-    /> */}
-    
-           
         </SafeAreaView>
   );
 };
