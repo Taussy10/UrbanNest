@@ -1,5 +1,6 @@
 import {
-  FlatList, Image, ScrollView, Text,TouchableOpacity,View,Dimensions,Platform,ImageBackground,} from "react-native";
+  FlatList, Image, ScrollView, Text,TouchableOpacity,View,Dimensions,Platform,ImageBackground,
+  Pressable,} from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import icons from "~/constants/icons";
@@ -21,15 +22,12 @@ const Details = () => {
       },
     });
   
-    console.log("Property from ID :" ,property);
+    console.log("Property from Length :" , property?.reviews?.avatar );
     
   
   
     // property?.facility.map((item:string, index:number) => {
     //   console.log("Item & index :",item , index) }
-property?.facility.map((item, index)=> {
-  console.log("Item & index :",item , index) 
-})
 
   
   return (
@@ -43,6 +41,27 @@ property?.facility.map((item, index)=> {
             <ImageBackground
             source= {{uri: property?.image}} className=" h-[375px] w-full"
             >
+    
+    {/* Top Navigation */}
+    <View className=" mt-5 flex-row items-center justify-between   px-4">
+      
+<Pressable onPress={() => router.back()}>
+    <Image  source={icons.backArrow}
+    className=" size-7 "/>
+</Pressable>
+
+      <View className=" flex-row items-center  gap-5">
+      <Image source={icons.heart}
+          className=" size-7"
+
+      />
+      <Image source={icons.wallet}
+          className=" size-7"
+
+      />
+      </View>
+    </View>
+
           {/* Write app bar code */}
             </ImageBackground>
             
@@ -244,10 +263,14 @@ also can't use ScrollView and Flatlist in same orientation so will use array.map
         {/* Map */}
         <Image source={images.map} resizeMode="contain" className="  h-52 w-full " />
       </View>
-    
 
-      {/* for reviews */}
-      <Reviews property={property} />
+      {
+        property?.reviews?.review?   (<Reviews property={property} />): (<Text className=" text-xl font-bold">No Reviews Found</Text>)        
+
+      }
+       
+        
+     
  
     
       {/* For price and Button */}
