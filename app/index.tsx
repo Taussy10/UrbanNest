@@ -1,31 +1,20 @@
-import {
-  Alert,
-  Button,
-  Image,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-import { useEffect } from 'react';
+import { Alert, Button, Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import images from '~/constants/images';
 import icons from '~/constants/icons';
 import { Redirect, useRouter } from 'expo-router';
-import { config, createUser } from '~/appwrite/appwrite';
-import * as Linking from 'expo-linking';
-import { getCurrentUser, Logout } from '~/appwrite/appwrite';
+import { createUser } from '~/appwrite/appwrite';
 import { useAuthContext } from '~/context/auth-context';
 
 type contextTypes = {
-  loggedIn: boolean,
-  user: boolean,
-  loading: boolean,
-}
+  loggedIn: boolean;
+  user: boolean;
+  loading: boolean;
+};
 
 const Onboarding = () => {
   const router = useRouter();
+
   const { user, loggedIn, loading } = useAuthContext();
 
   //  && loading && !loading
