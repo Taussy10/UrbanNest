@@ -23,7 +23,6 @@ import { Link, router, useLocalSearchParams, useRouter } from 'expo-router';
 import { useAppwrite } from '~/hooks/useAppwrite';
 import NoResults from '~/components/home/no-results';
 import icons from '~/constants/icons';
-
 const Explore = () => {
   const router = useRouter()
   const params = useLocalSearchParams<{ query?: string; filter?: string }>();
