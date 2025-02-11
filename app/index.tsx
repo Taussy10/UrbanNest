@@ -1,4 +1,4 @@
-import { Alert, Button, Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { Alert, Button, Image, ScrollView, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import images from '~/constants/images';
 import icons from '~/constants/icons';
@@ -44,6 +44,7 @@ const Onboarding = () => {
 
   return (
     <SafeAreaView className=" flex-1 bg-white">
+      <StatusBar barStyle={"light-content"}/>
       {/* Always add ScrollView for each screen if user devices small then they can scroll */}
       <ScrollView
         contentContainerClassName="h-full"

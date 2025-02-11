@@ -5,6 +5,8 @@ import icons from '../../constants/icons';
 import { useAuthContext } from '~/context/auth-context';
 
 import SettingsItem  from '~/components/profile/settings-item';
+import { Logout } from '~/appwrite/appwrite';
+import { router } from 'expo-router';
 
 
 
@@ -12,6 +14,15 @@ const Profile = () => {
   const {user} = useAuthContext()
   console.log(user);
   
+const logoutUser = async() => {
+  try {
+    await Logout()
+ router.replace("/")
+  } catch (error) {
+    
+  }
+}
+
   return (
     <SafeAreaView className='flex-1 p-4  bg-white '>
       <ScrollView
@@ -81,7 +92,7 @@ source={icons.bell} />
 
  <TouchableOpacity 
  activeOpacity={0.7}
- onPress={ ()=>console.log("Logout") }
+ onPress={logoutUser}
  className=" flex-row items-center gap-2 ">
  <Image source={icons.logout} resizeMode="contain" className="  h-7 w-7 " />
 <Text className=' font-semibold text-xl  text-danger'>Logout</Text>

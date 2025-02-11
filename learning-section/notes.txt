@@ -1,5 +1,7 @@
- Always add ScrollView for each screen if user devices small then they can scroll 
-  {/* use redirect while working on any screen 
-    app will refresh and move to that screen*/}
-    {/* <Redirect href={'/details'} /> */}
+ 1. Always(if no flatlis in starting) add ScrollView for each screen if 
+ user devices small then they can scroll 
+  
+ 2. Use redirect while working on any screen:  
+    app will refresh and move to that screen
+     <Redirect href={'/details'} /> 
 

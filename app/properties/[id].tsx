@@ -7,7 +7,7 @@ import icons from "~/constants/icons";
 import images from "~/constants/images";
 import { useAppwrite } from "~/hooks/useAppwrite";
 import { getPropertyDetails } from "~/appwrite/appwrite";
-import Reviews from "~/components/details/Reviews";
+import Reviews from "~/components/details/reviews";
 import AntDesign from '@expo/vector-icons/AntDesign';
 const Details = () => {
  
@@ -20,7 +20,7 @@ const Details = () => {
       },
     });
   
-    console.log("Property from Length :" , property?.reviews?.avatar );
+    console.log("Property Details :" , property);
     
   
   
