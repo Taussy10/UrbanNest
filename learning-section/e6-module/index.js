@@ -6,7 +6,8 @@
 // and we want to use it in index.js
 // so how ? by Named export and default export 
 
-// firstly these are just syntax so don'worry about it
+// For named export always use curly and for default export you don't need curly 
+
 
 // Named export
 import { users } from "./users.js ";
